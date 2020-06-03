@@ -73,7 +73,7 @@
             this.txtNome.Location = new System.Drawing.Point(83, 60);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(252, 20);
-            this.txtNome.TabIndex = 0;
+            this.txtNome.TabIndex = 1;
             // 
             // txtBairro
             // 
@@ -83,7 +83,7 @@
             this.txtBairro.Location = new System.Drawing.Point(83, 225);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 20);
-            this.txtBairro.TabIndex = 0;
+            this.txtBairro.TabIndex = 11;
             // 
             // txtCidade
             // 
@@ -93,7 +93,7 @@
             this.txtCidade.Location = new System.Drawing.Point(235, 225);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(100, 20);
-            this.txtCidade.TabIndex = 0;
+            this.txtCidade.TabIndex = 12;
             // 
             // label1
             // 
@@ -235,7 +235,7 @@
             this.txtEmail.Location = new System.Drawing.Point(398, 101);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(166, 20);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 5;
             // 
             // comboCargo
             // 
@@ -243,10 +243,11 @@
             this.comboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.comboCargo.ForeColor = System.Drawing.Color.White;
             this.comboCargo.FormattingEnabled = true;
+            this.comboCargo.ItemHeight = 13;
             this.comboCargo.Location = new System.Drawing.Point(398, 136);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(166, 21);
-            this.comboCargo.TabIndex = 8;
+            this.comboCargo.TabIndex = 7;
             // 
             // label12
             // 
@@ -268,7 +269,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(83, 181);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(252, 20);
-            this.txtEndereco.TabIndex = 0;
+            this.txtEndereco.TabIndex = 8;
             // 
             // label13
             // 
@@ -325,7 +326,7 @@
             this.txtLogin.Location = new System.Drawing.Point(125, 287);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(150, 20);
-            this.txtLogin.TabIndex = 15;
+            this.txtLogin.TabIndex = 14;
             // 
             // label16
             // 
@@ -348,7 +349,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(150, 20);
-            this.txtSenha.TabIndex = 17;
+            this.txtSenha.TabIndex = 15;
             // 
             // btnCadastrar
             // 
@@ -359,7 +360,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(398, 290);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 35);
-            this.btnCadastrar.TabIndex = 18;
+            this.btnCadastrar.TabIndex = 16;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -384,7 +385,7 @@
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(117, 23);
-            this.txtDataNasc.TabIndex = 20;
+            this.txtDataNasc.TabIndex = 2;
             this.txtDataNasc.ValidatingType = typeof(System.DateTime);
             // 
             // txtRg
@@ -395,7 +396,7 @@
             this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(100, 23);
-            this.txtRg.TabIndex = 21;
+            this.txtRg.TabIndex = 3;
             // 
             // txtCpf
             // 
@@ -405,7 +406,7 @@
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(100, 23);
-            this.txtCpf.TabIndex = 22;
+            this.txtCpf.TabIndex = 4;
             // 
             // txtCep
             // 
@@ -415,7 +416,7 @@
             this.txtCep.Mask = "00.000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(83, 23);
-            this.txtCep.TabIndex = 23;
+            this.txtCep.TabIndex = 10;
             // 
             // txtTelefone
             // 
@@ -425,7 +426,7 @@
             this.txtTelefone.Mask = "(00)0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.txtTelefone.TabIndex = 24;
+            this.txtTelefone.TabIndex = 6;
             // 
             // txtNumEndereco
             // 
@@ -435,7 +436,7 @@
             this.txtNumEndereco.Mask = "0000";
             this.txtNumEndereco.Name = "txtNumEndereco";
             this.txtNumEndereco.Size = new System.Drawing.Size(39, 23);
-            this.txtNumEndereco.TabIndex = 25;
+            this.txtNumEndereco.TabIndex = 9;
             // 
             // txtCelular
             // 
@@ -445,7 +446,7 @@
             this.txtCelular.Mask = "(00)00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 23);
-            this.txtCelular.TabIndex = 26;
+            this.txtCelular.TabIndex = 7;
             // 
             // TelaCadFunc
             // 
@@ -490,6 +491,7 @@
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadFunc";
             this.Text = "Cadastrar Funcionário";
             this.Load += new System.EventHandler(this.TelaCadFunc_Load);

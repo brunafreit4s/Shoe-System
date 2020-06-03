@@ -37,9 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCusto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,12 +49,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePickerCadastro = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerCompra = new System.Windows.Forms.DateTimePicker();
-            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDownEstoque = new System.Windows.Forms.NumericUpDown();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCodProd = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
+            this.txtCusto = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEstoque)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(217, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Produtos";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // numericUpDownQuantidade
             // 
@@ -87,7 +86,7 @@
             0});
             this.numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             this.numericUpDownQuantidade.Size = new System.Drawing.Size(59, 23);
-            this.numericUpDownQuantidade.TabIndex = 1;
+            this.numericUpDownQuantidade.TabIndex = 3;
             // 
             // label2
             // 
@@ -98,7 +97,6 @@
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cód. Produto:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNomeProduto
             // 
@@ -107,8 +105,7 @@
             this.txtNomeProduto.Location = new System.Drawing.Point(137, 72);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(233, 23);
-            this.txtNomeProduto.TabIndex = 7;
-            this.txtNomeProduto.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            this.txtNomeProduto.TabIndex = 2;
             // 
             // label3
             // 
@@ -139,7 +136,6 @@
             this.label5.Size = new System.Drawing.Size(38, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Qtde:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtDescricao
             // 
@@ -149,17 +145,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(262, 23);
-            this.txtDescricao.TabIndex = 10;
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(15, 125);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(96, 23);
-            this.txtPreco.TabIndex = 12;
-            this.txtPreco.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
+            this.txtDescricao.TabIndex = 12;
             // 
             // label6
             // 
@@ -171,16 +157,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Preço:";
             // 
-            // txtCusto
-            // 
-            this.txtCusto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCusto.ForeColor = System.Drawing.Color.White;
-            this.txtCusto.Location = new System.Drawing.Point(137, 125);
-            this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(96, 23);
-            this.txtCusto.TabIndex = 14;
-            this.txtCusto.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -190,7 +166,6 @@
             this.label7.Size = new System.Drawing.Size(42, 15);
             this.label7.TabIndex = 13;
             this.label7.Text = "Custo:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtMarca
             // 
@@ -199,7 +174,7 @@
             this.txtMarca.Location = new System.Drawing.Point(260, 125);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(194, 23);
-            this.txtMarca.TabIndex = 16;
+            this.txtMarca.TabIndex = 7;
             // 
             // label8
             // 
@@ -226,11 +201,11 @@
             this.cboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.cboTipo.ForeColor = System.Drawing.Color.White;
             this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.ItemHeight = 14;
             this.cboTipo.Location = new System.Drawing.Point(260, 177);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(194, 22);
-            this.cboTipo.TabIndex = 18;
-            this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cboTipo.TabIndex = 10;
             // 
             // txtFornecedor
             // 
@@ -239,7 +214,7 @@
             this.txtFornecedor.Location = new System.Drawing.Point(15, 178);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(218, 23);
-            this.txtFornecedor.TabIndex = 20;
+            this.txtFornecedor.TabIndex = 9;
             // 
             // label10
             // 
@@ -270,7 +245,6 @@
             this.label12.Size = new System.Drawing.Size(103, 15);
             this.label12.TabIndex = 22;
             this.label12.Text = "Data do Cadastro:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // dateTimePickerCadastro
             // 
@@ -280,7 +254,7 @@
             this.dateTimePickerCadastro.Location = new System.Drawing.Point(475, 69);
             this.dateTimePickerCadastro.Name = "dateTimePickerCadastro";
             this.dateTimePickerCadastro.Size = new System.Drawing.Size(94, 23);
-            this.dateTimePickerCadastro.TabIndex = 23;
+            this.dateTimePickerCadastro.TabIndex = 4;
             // 
             // dateTimePickerCompra
             // 
@@ -290,17 +264,7 @@
             this.dateTimePickerCompra.Location = new System.Drawing.Point(475, 122);
             this.dateTimePickerCompra.Name = "dateTimePickerCompra";
             this.dateTimePickerCompra.Size = new System.Drawing.Size(94, 23);
-            this.dateTimePickerCompra.TabIndex = 24;
-            // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
-            this.txtCodigoBarra.Location = new System.Drawing.Point(310, 233);
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(259, 23);
-            this.txtCodigoBarra.TabIndex = 26;
-            this.txtCodigoBarra.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dateTimePickerCompra.TabIndex = 8;
             // 
             // label13
             // 
@@ -311,7 +275,6 @@
             this.label13.Size = new System.Drawing.Size(101, 15);
             this.label13.TabIndex = 25;
             this.label13.Text = "Código de Barras:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -335,7 +298,7 @@
             0});
             this.numericUpDownEstoque.Name = "numericUpDownEstoque";
             this.numericUpDownEstoque.Size = new System.Drawing.Size(94, 23);
-            this.numericUpDownEstoque.TabIndex = 28;
+            this.numericUpDownEstoque.TabIndex = 11;
             // 
             // btnCadastrar
             // 
@@ -346,9 +309,10 @@
             this.btnCadastrar.Location = new System.Drawing.Point(230, 278);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 35);
-            this.btnCadastrar.TabIndex = 29;
+            this.btnCadastrar.TabIndex = 14;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtCodProd
             // 
@@ -357,9 +321,39 @@
             this.txtCodProd.Location = new System.Drawing.Point(15, 71);
             this.txtCodProd.Mask = "0000";
             this.txtCodProd.Name = "txtCodProd";
-            this.txtCodProd.Size = new System.Drawing.Size(79, 23);
-            this.txtCodProd.TabIndex = 30;
+            this.txtCodProd.Size = new System.Drawing.Size(99, 23);
+            this.txtCodProd.TabIndex = 1;
             this.txtCodProd.ValidatingType = typeof(int);
+            // 
+            // txtCodigoBarra
+            // 
+            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
+            this.txtCodigoBarra.Location = new System.Drawing.Point(310, 233);
+            this.txtCodigoBarra.Mask = "0000000000";
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(259, 23);
+            this.txtCodigoBarra.TabIndex = 13;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtPreco.ForeColor = System.Drawing.Color.White;
+            this.txtPreco.Location = new System.Drawing.Point(15, 125);
+            this.txtPreco.Mask = "000.00";
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(99, 23);
+            this.txtPreco.TabIndex = 5;
+            // 
+            // txtCusto
+            // 
+            this.txtCusto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCusto.ForeColor = System.Drawing.Color.White;
+            this.txtCusto.Location = new System.Drawing.Point(138, 125);
+            this.txtCusto.Mask = "000.00";
+            this.txtCusto.Name = "txtCusto";
+            this.txtCusto.Size = new System.Drawing.Size(95, 23);
+            this.txtCusto.TabIndex = 6;
             // 
             // TelaCadProd
             // 
@@ -369,11 +363,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 328);
+            this.Controls.Add(this.txtCusto);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.txtCodProd);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.numericUpDownEstoque);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dateTimePickerCompra);
             this.Controls.Add(this.dateTimePickerCadastro);
@@ -385,9 +381,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label5);
@@ -401,7 +395,6 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "TelaCadProd";
             this.Text = "Cadastrar Produtos";
-            this.Load += new System.EventHandler(this.TelaCadProd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEstoque)).EndInit();
             this.ResumeLayout(false);
@@ -419,9 +412,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCusto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label8;
@@ -433,11 +424,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePickerCadastro;
         private System.Windows.Forms.DateTimePicker dateTimePickerCompra;
-        private System.Windows.Forms.TextBox txtCodigoBarra;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown numericUpDownEstoque;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.MaskedTextBox txtCodProd;
+        private System.Windows.Forms.MaskedTextBox txtCodigoBarra;
+        private System.Windows.Forms.MaskedTextBox txtPreco;
+        private System.Windows.Forms.MaskedTextBox txtCusto;
     }
 }

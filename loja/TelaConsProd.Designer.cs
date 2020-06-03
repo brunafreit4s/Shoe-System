@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsProd));
             this.numericUpDownEstoque = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerCompra = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerCadastro = new System.Windows.Forms.DateTimePicker();
@@ -43,15 +42,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCusto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +56,10 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCodProd = new System.Windows.Forms.MaskedTextBox();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
+            this.txtCusto = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,7 @@
             0});
             this.numericUpDownEstoque.Name = "numericUpDownEstoque";
             this.numericUpDownEstoque.Size = new System.Drawing.Size(94, 20);
-            this.numericUpDownEstoque.TabIndex = 54;
+            this.numericUpDownEstoque.TabIndex = 11;
             // 
             // label14
             // 
@@ -87,15 +87,6 @@
             this.label14.Size = new System.Drawing.Size(49, 13);
             this.label14.TabIndex = 53;
             this.label14.Text = "Estoque:";
-            // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
-            this.txtCodigoBarra.Location = new System.Drawing.Point(320, 245);
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(259, 20);
-            this.txtCodigoBarra.TabIndex = 52;
             // 
             // label13
             // 
@@ -115,7 +106,7 @@
             this.dateTimePickerCompra.Location = new System.Drawing.Point(485, 134);
             this.dateTimePickerCompra.Name = "dateTimePickerCompra";
             this.dateTimePickerCompra.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePickerCompra.TabIndex = 50;
+            this.dateTimePickerCompra.TabIndex = 8;
             // 
             // dateTimePickerCadastro
             // 
@@ -125,7 +116,7 @@
             this.dateTimePickerCadastro.Location = new System.Drawing.Point(485, 81);
             this.dateTimePickerCadastro.Name = "dateTimePickerCadastro";
             this.dateTimePickerCadastro.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePickerCadastro.TabIndex = 49;
+            this.dateTimePickerCadastro.TabIndex = 4;
             // 
             // label12
             // 
@@ -154,7 +145,7 @@
             this.txtFornecedor.Location = new System.Drawing.Point(25, 190);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(218, 20);
-            this.txtFornecedor.TabIndex = 46;
+            this.txtFornecedor.TabIndex = 9;
             // 
             // label10
             // 
@@ -171,10 +162,11 @@
             this.cboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.cboTipo.ForeColor = System.Drawing.Color.White;
             this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.ItemHeight = 13;
             this.cboTipo.Location = new System.Drawing.Point(270, 189);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(194, 21);
-            this.cboTipo.TabIndex = 44;
+            this.cboTipo.TabIndex = 10;
             // 
             // label9
             // 
@@ -193,7 +185,7 @@
             this.txtMarca.Location = new System.Drawing.Point(270, 137);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(194, 20);
-            this.txtMarca.TabIndex = 42;
+            this.txtMarca.TabIndex = 7;
             // 
             // label8
             // 
@@ -205,15 +197,6 @@
             this.label8.TabIndex = 41;
             this.label8.Text = "Marca:";
             // 
-            // txtCusto
-            // 
-            this.txtCusto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCusto.ForeColor = System.Drawing.Color.White;
-            this.txtCusto.Location = new System.Drawing.Point(147, 137);
-            this.txtCusto.Name = "txtCusto";
-            this.txtCusto.Size = new System.Drawing.Size(96, 20);
-            this.txtCusto.TabIndex = 40;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -224,15 +207,6 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Custo:";
             // 
-            // txtPreco
-            // 
-            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(25, 137);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(96, 20);
-            this.txtPreco.TabIndex = 38;
-            // 
             // txtDescricao
             // 
             this.txtDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
@@ -241,7 +215,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(262, 23);
-            this.txtDescricao.TabIndex = 37;
+            this.txtDescricao.TabIndex = 12;
             // 
             // label5
             // 
@@ -270,7 +244,7 @@
             this.txtNomeProduto.Location = new System.Drawing.Point(147, 84);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(233, 20);
-            this.txtNomeProduto.TabIndex = 34;
+            this.txtNomeProduto.TabIndex = 2;
             // 
             // label3
             // 
@@ -281,15 +255,6 @@
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 33;
             this.label3.Text = "Nome:";
-            // 
-            // txtCodProduto
-            // 
-            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodProduto.ForeColor = System.Drawing.Color.White;
-            this.txtCodProduto.Location = new System.Drawing.Point(25, 84);
-            this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(96, 20);
-            this.txtCodProduto.TabIndex = 32;
             // 
             // label2
             // 
@@ -313,7 +278,7 @@
             0});
             this.numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             this.numericUpDownQuantidade.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDownQuantidade.TabIndex = 30;
+            this.numericUpDownQuantidade.TabIndex = 3;
             // 
             // label1
             // 
@@ -336,7 +301,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(120, 296);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 40);
-            this.btnLimpar.TabIndex = 58;
+            this.btnLimpar.TabIndex = 14;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             // 
@@ -349,7 +314,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(221, 296);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 40);
-            this.btnConsultar.TabIndex = 55;
+            this.btnConsultar.TabIndex = 15;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
             // 
@@ -363,7 +328,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(320, 296);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 40);
-            this.btnAlterar.TabIndex = 56;
+            this.btnAlterar.TabIndex = 16;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             // 
@@ -377,7 +342,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(425, 296);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 40);
-            this.btnExcluir.TabIndex = 57;
+            this.btnExcluir.TabIndex = 17;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             // 
@@ -391,6 +356,47 @@
             this.label6.TabIndex = 59;
             this.label6.Text = "Preço:";
             // 
+            // txtCodProd
+            // 
+            this.txtCodProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodProd.ForeColor = System.Drawing.Color.White;
+            this.txtCodProd.Location = new System.Drawing.Point(25, 84);
+            this.txtCodProd.Mask = "0000";
+            this.txtCodProd.Name = "txtCodProd";
+            this.txtCodProd.Size = new System.Drawing.Size(101, 20);
+            this.txtCodProd.TabIndex = 1;
+            this.txtCodProd.ValidatingType = typeof(int);
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtPreco.ForeColor = System.Drawing.Color.White;
+            this.txtPreco.Location = new System.Drawing.Point(25, 137);
+            this.txtPreco.Mask = "000.00";
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(101, 20);
+            this.txtPreco.TabIndex = 5;
+            // 
+            // txtCusto
+            // 
+            this.txtCusto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCusto.ForeColor = System.Drawing.Color.White;
+            this.txtCusto.Location = new System.Drawing.Point(148, 137);
+            this.txtCusto.Mask = "000.00";
+            this.txtCusto.Name = "txtCusto";
+            this.txtCusto.Size = new System.Drawing.Size(95, 20);
+            this.txtCusto.TabIndex = 6;
+            // 
+            // txtCodigoBarra
+            // 
+            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
+            this.txtCodigoBarra.Location = new System.Drawing.Point(320, 245);
+            this.txtCodigoBarra.Mask = "0000000000";
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(259, 20);
+            this.txtCodigoBarra.TabIndex = 13;
+            // 
             // TelaConsProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +405,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(613, 346);
+            this.Controls.Add(this.txtCodigoBarra);
+            this.Controls.Add(this.txtCusto);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtCodProd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnConsultar);
@@ -406,7 +416,6 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.numericUpDownEstoque);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dateTimePickerCompra);
             this.Controls.Add(this.dateTimePickerCadastro);
@@ -418,15 +427,12 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numericUpDownQuantidade);
             this.Controls.Add(this.label1);
@@ -445,7 +451,6 @@
 
         private System.Windows.Forms.NumericUpDown numericUpDownEstoque;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCodigoBarra;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePickerCompra;
         private System.Windows.Forms.DateTimePicker dateTimePickerCadastro;
@@ -457,15 +462,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCusto;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodProduto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantidade;
         private System.Windows.Forms.Label label1;
@@ -474,5 +476,9 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txtCodProd;
+        private System.Windows.Forms.MaskedTextBox txtPreco;
+        private System.Windows.Forms.MaskedTextBox txtCusto;
+        private System.Windows.Forms.MaskedTextBox txtCodigoBarra;
     }
 }

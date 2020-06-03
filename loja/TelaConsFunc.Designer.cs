@@ -92,7 +92,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(114, 23);
-            this.txtSenha.TabIndex = 50;
+            this.txtSenha.TabIndex = 17;
             // 
             // label16
             // 
@@ -112,7 +112,7 @@
             this.txtLogin.Location = new System.Drawing.Point(114, 295);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(148, 23);
-            this.txtLogin.TabIndex = 48;
+            this.txtLogin.TabIndex = 16;
             // 
             // label15
             // 
@@ -133,7 +133,7 @@
             this.txtUf.MaxLength = 2;
             this.txtUf.Name = "txtUf";
             this.txtUf.Size = new System.Drawing.Size(39, 23);
-            this.txtUf.TabIndex = 46;
+            this.txtUf.TabIndex = 15;
             // 
             // label14
             // 
@@ -176,7 +176,7 @@
             this.comboCargo.Location = new System.Drawing.Point(404, 159);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(169, 22);
-            this.comboCargo.TabIndex = 41;
+            this.comboCargo.TabIndex = 9;
             // 
             // txtEmail
             // 
@@ -185,7 +185,7 @@
             this.txtEmail.Location = new System.Drawing.Point(404, 119);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(169, 23);
-            this.txtEmail.TabIndex = 40;
+            this.txtEmail.TabIndex = 6;
             // 
             // label11
             // 
@@ -314,7 +314,7 @@
             this.txtCidade.Location = new System.Drawing.Point(238, 239);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(100, 23);
-            this.txtCidade.TabIndex = 26;
+            this.txtCidade.TabIndex = 14;
             // 
             // txtBairro
             // 
@@ -323,7 +323,7 @@
             this.txtBairro.Location = new System.Drawing.Point(74, 239);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 23);
-            this.txtBairro.TabIndex = 25;
+            this.txtBairro.TabIndex = 13;
             // 
             // txtEndereco
             // 
@@ -332,7 +332,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(74, 204);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(264, 23);
-            this.txtEndereco.TabIndex = 24;
+            this.txtEndereco.TabIndex = 10;
             // 
             // txtNome
             // 
@@ -341,7 +341,7 @@
             this.txtNome.Location = new System.Drawing.Point(74, 85);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(264, 23);
-            this.txtNome.TabIndex = 19;
+            this.txtNome.TabIndex = 2;
             // 
             // btnAlterar
             // 
@@ -414,7 +414,7 @@
             this.txtDataNasc.Mask = "00/00/0000";
             this.txtDataNasc.Name = "txtDataNasc";
             this.txtDataNasc.Size = new System.Drawing.Size(105, 23);
-            this.txtDataNasc.TabIndex = 56;
+            this.txtDataNasc.TabIndex = 3;
             this.txtDataNasc.ValidatingType = typeof(System.DateTime);
             // 
             // txtNumEndereco
@@ -425,7 +425,7 @@
             this.txtNumEndereco.Mask = "0000";
             this.txtNumEndereco.Name = "txtNumEndereco";
             this.txtNumEndereco.Size = new System.Drawing.Size(39, 23);
-            this.txtNumEndereco.TabIndex = 61;
+            this.txtNumEndereco.TabIndex = 11;
             // 
             // txtMatricula
             // 
@@ -435,7 +435,7 @@
             this.txtMatricula.Mask = "0000";
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(47, 23);
-            this.txtMatricula.TabIndex = 63;
+            this.txtMatricula.TabIndex = 1;
             // 
             // txtRg
             // 
@@ -445,7 +445,7 @@
             this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(100, 23);
-            this.txtRg.TabIndex = 64;
+            this.txtRg.TabIndex = 4;
             // 
             // txtCpf
             // 
@@ -455,7 +455,7 @@
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(100, 23);
-            this.txtCpf.TabIndex = 65;
+            this.txtCpf.TabIndex = 5;
             // 
             // txtTelefone
             // 
@@ -465,7 +465,7 @@
             this.txtTelefone.Mask = "(00)0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.txtTelefone.TabIndex = 66;
+            this.txtTelefone.TabIndex = 7;
             // 
             // txtCelular
             // 
@@ -475,7 +475,7 @@
             this.txtCelular.Mask = "(00)00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 23);
-            this.txtCelular.TabIndex = 67;
+            this.txtCelular.TabIndex = 8;
             // 
             // txtCep
             // 
@@ -485,7 +485,7 @@
             this.txtCep.Mask = "00.000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(83, 23);
-            this.txtCep.TabIndex = 68;
+            this.txtCep.TabIndex = 12;
             // 
             // TelaConsFunc
             // 
@@ -536,6 +536,7 @@
             this.Controls.Add(this.txtNome);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsFunc";
             this.Text = "Consultar Funcionário";
             this.Load += new System.EventHandler(this.TelaConsFunc_Load);
