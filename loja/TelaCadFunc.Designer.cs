@@ -349,6 +349,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(150, 20);
             this.txtSenha.TabIndex = 17;
+            this.txtSenha.Text = "++";
             // 
             // btnCadastrar
             // 
@@ -369,7 +370,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(160, 18);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(232, 26);
@@ -490,6 +491,7 @@
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadFunc";
             this.Text = "Cadastrar Funcionário";
             this.Load += new System.EventHandler(this.TelaCadFunc_Load);

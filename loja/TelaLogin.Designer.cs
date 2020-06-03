@@ -63,11 +63,12 @@
             // btnLogar
             // 
             this.btnLogar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.btnLogar.Font = new System.Drawing.Font("Corbel", 18.25F);
+            this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogar.Font = new System.Drawing.Font("Corbel", 16.25F);
             this.btnLogar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(72)))), ((int)(((byte)(156)))));
-            this.btnLogar.Location = new System.Drawing.Point(214, 194);
+            this.btnLogar.Location = new System.Drawing.Point(204, 194);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(133, 43);
+            this.btnLogar.Size = new System.Drawing.Size(153, 32);
             this.btnLogar.TabIndex = 2;
             this.btnLogar.Text = "Entrar";
             this.btnLogar.UseVisualStyleBackColor = false;

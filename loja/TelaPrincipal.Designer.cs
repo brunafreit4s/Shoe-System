@@ -80,7 +80,7 @@
             this.menuCadFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuCadFunc.ForeColor = System.Drawing.Color.White;
             this.menuCadFunc.Name = "menuCadFunc";
-            this.menuCadFunc.Size = new System.Drawing.Size(134, 22);
+            this.menuCadFunc.Size = new System.Drawing.Size(180, 22);
             this.menuCadFunc.Text = "Cadastrar";
             this.menuCadFunc.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
@@ -89,7 +89,7 @@
             this.menuConsFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuConsFunc.ForeColor = System.Drawing.Color.White;
             this.menuConsFunc.Name = "menuConsFunc";
-            this.menuConsFunc.Size = new System.Drawing.Size(134, 22);
+            this.menuConsFunc.Size = new System.Drawing.Size(180, 22);
             this.menuConsFunc.Text = "Consultar";
             this.menuConsFunc.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 

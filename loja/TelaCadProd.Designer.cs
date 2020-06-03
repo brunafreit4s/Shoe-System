@@ -276,6 +276,7 @@
             // 
             this.dateTimePickerCadastro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.dateTimePickerCadastro.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.dateTimePickerCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerCadastro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerCadastro.Location = new System.Drawing.Point(475, 69);
             this.dateTimePickerCadastro.Name = "dateTimePickerCadastro";
@@ -286,6 +287,7 @@
             // 
             this.dateTimePickerCompra.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.dateTimePickerCompra.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.dateTimePickerCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerCompra.Location = new System.Drawing.Point(475, 122);
             this.dateTimePickerCompra.Name = "dateTimePickerCompra";
@@ -399,6 +401,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadProd";
             this.Text = "Cadastrar Produtos";
             this.Load += new System.EventHandler(this.TelaCadProd_Load);

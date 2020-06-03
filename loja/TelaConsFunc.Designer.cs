@@ -73,6 +73,7 @@
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Enabled = false;
             this.btnExcluir.Font = new System.Drawing.Font("Corbel", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
@@ -346,6 +347,7 @@
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.Enabled = false;
             this.btnAlterar.Font = new System.Drawing.Font("Corbel", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
@@ -360,6 +362,7 @@
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.Font = new System.Drawing.Font("Corbel", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.btnConsultar.Location = new System.Drawing.Point(189, 355);
@@ -384,6 +387,7 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.Font = new System.Drawing.Font("Corbel", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.btnLimpar.Location = new System.Drawing.Point(95, 355);
@@ -536,6 +540,7 @@
             this.Controls.Add(this.txtNome);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsFunc";
             this.Text = "Consultar Funcionário";
             this.Load += new System.EventHandler(this.TelaConsFunc_Load);

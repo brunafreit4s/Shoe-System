@@ -43,16 +43,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.datePagamento = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboTipoPagamento = new System.Windows.Forms.ComboBox();
-            this.txtProduto = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtCódigo = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.nudQuatidadeProdutos = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.txtImposto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.nudNumParcelas = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
@@ -64,15 +56,23 @@
             this.txtValorUnitario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAcrescimo = new System.Windows.Forms.TextBox();
-            this.txtImposto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtCodigoBarra = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cboTipoPagamento = new System.Windows.Forms.ComboBox();
+            this.txtProduto = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtCódigo = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.nudQuatidadeProdutos = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumParcelas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -147,6 +147,7 @@
             // 
             this.dateCompra.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.dateCompra.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.dateCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateCompra.Location = new System.Drawing.Point(438, 63);
             this.dateCompra.Name = "dateCompra";
@@ -195,6 +196,7 @@
             // 
             // datePagamento
             // 
+            this.datePagamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.datePagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePagamento.Location = new System.Drawing.Point(425, 107);
             this.datePagamento.Name = "datePagamento";
@@ -237,6 +239,155 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Pedido";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // txtImposto
+            // 
+            this.txtImposto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtImposto.ForeColor = System.Drawing.Color.White;
+            this.txtImposto.Location = new System.Drawing.Point(204, 216);
+            this.txtImposto.Name = "txtImposto";
+            this.txtImposto.Size = new System.Drawing.Size(119, 23);
+            this.txtImposto.TabIndex = 65;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(201, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 15);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "Imposto:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(383, 145);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 15);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Acréscimo ao mês:";
+            // 
+            // nudNumParcelas
+            // 
+            this.nudNumParcelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.nudNumParcelas.ForeColor = System.Drawing.Color.White;
+            this.nudNumParcelas.Location = new System.Drawing.Point(289, 164);
+            this.nudNumParcelas.Name = "nudNumParcelas";
+            this.nudNumParcelas.Size = new System.Drawing.Size(71, 23);
+            this.nudNumParcelas.TabIndex = 62;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Location = new System.Drawing.Point(286, 145);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 15);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "Nº Parcelas:";
+            // 
+            // chkParcelado
+            // 
+            this.chkParcelado.AutoSize = true;
+            this.chkParcelado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkParcelado.Location = new System.Drawing.Point(179, 164);
+            this.chkParcelado.Name = "chkParcelado";
+            this.chkParcelado.Size = new System.Drawing.Size(78, 19);
+            this.chkParcelado.TabIndex = 60;
+            this.chkParcelado.Text = "Parcelado";
+            this.chkParcelado.UseVisualStyleBackColor = true;
+            // 
+            // txtDesconto
+            // 
+            this.txtDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDesconto.ForeColor = System.Drawing.Color.White;
+            this.txtDesconto.Location = new System.Drawing.Point(30, 216);
+            this.txtDesconto.Name = "txtDesconto";
+            this.txtDesconto.Size = new System.Drawing.Size(117, 23);
+            this.txtDesconto.TabIndex = 58;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(27, 198);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 15);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "Desconto:";
+            // 
+            // txtValorTotal
+            // 
+            this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtValorTotal.ForeColor = System.Drawing.Color.White;
+            this.txtValorTotal.Location = new System.Drawing.Point(386, 216);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(119, 23);
+            this.txtValorTotal.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(383, 198);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 15);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Valor Total:";
+            // 
+            // txtValorUnitario
+            // 
+            this.txtValorUnitario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtValorUnitario.ForeColor = System.Drawing.Color.White;
+            this.txtValorUnitario.Location = new System.Drawing.Point(30, 163);
+            this.txtValorUnitario.Name = "txtValorUnitario";
+            this.txtValorUnitario.Size = new System.Drawing.Size(117, 23);
+            this.txtValorUnitario.TabIndex = 54;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(27, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 15);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Valor Unitário:";
+            // 
+            // txtAcrescimo
+            // 
+            this.txtAcrescimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtAcrescimo.ForeColor = System.Drawing.Color.White;
+            this.txtAcrescimo.Location = new System.Drawing.Point(386, 164);
+            this.txtAcrescimo.Name = "txtAcrescimo";
+            this.txtAcrescimo.Size = new System.Drawing.Size(119, 23);
+            this.txtAcrescimo.TabIndex = 52;
+            // 
+            // txtCodigoBarra
+            // 
+            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
+            this.txtCodigoBarra.Location = new System.Drawing.Point(27, 109);
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(184, 23);
+            this.txtCodigoBarra.TabIndex = 48;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(24, 91);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(101, 15);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "Código de Barras:";
             // 
             // cboTipoPagamento
             // 
@@ -323,154 +474,6 @@
             this.label19.TabIndex = 39;
             this.label19.Text = "Quantidade:";
             // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
-            this.txtCodigoBarra.Location = new System.Drawing.Point(27, 109);
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(184, 23);
-            this.txtCodigoBarra.TabIndex = 48;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(24, 91);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 15);
-            this.label15.TabIndex = 47;
-            this.label15.Text = "Código de Barras:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(383, 145);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 15);
-            this.label13.TabIndex = 63;
-            this.label13.Text = "Acréscimo ao mês:";
-            // 
-            // nudNumParcelas
-            // 
-            this.nudNumParcelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.nudNumParcelas.ForeColor = System.Drawing.Color.White;
-            this.nudNumParcelas.Location = new System.Drawing.Point(289, 164);
-            this.nudNumParcelas.Name = "nudNumParcelas";
-            this.nudNumParcelas.Size = new System.Drawing.Size(71, 23);
-            this.nudNumParcelas.TabIndex = 62;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(286, 145);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 15);
-            this.label12.TabIndex = 61;
-            this.label12.Text = "Nº Parcelas:";
-            // 
-            // chkParcelado
-            // 
-            this.chkParcelado.AutoSize = true;
-            this.chkParcelado.Location = new System.Drawing.Point(179, 164);
-            this.chkParcelado.Name = "chkParcelado";
-            this.chkParcelado.Size = new System.Drawing.Size(78, 19);
-            this.chkParcelado.TabIndex = 60;
-            this.chkParcelado.Text = "Parcelado";
-            this.chkParcelado.UseVisualStyleBackColor = true;
-            // 
-            // txtDesconto
-            // 
-            this.txtDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtDesconto.ForeColor = System.Drawing.Color.White;
-            this.txtDesconto.Location = new System.Drawing.Point(30, 216);
-            this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(117, 23);
-            this.txtDesconto.TabIndex = 58;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(27, 198);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 15);
-            this.label10.TabIndex = 57;
-            this.label10.Text = "Desconto:";
-            // 
-            // txtValorTotal
-            // 
-            this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtValorTotal.ForeColor = System.Drawing.Color.White;
-            this.txtValorTotal.Location = new System.Drawing.Point(386, 216);
-            this.txtValorTotal.Name = "txtValorTotal";
-            this.txtValorTotal.Size = new System.Drawing.Size(119, 23);
-            this.txtValorTotal.TabIndex = 56;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(383, 198);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 15);
-            this.label8.TabIndex = 55;
-            this.label8.Text = "Valor Total:";
-            // 
-            // txtValorUnitario
-            // 
-            this.txtValorUnitario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtValorUnitario.ForeColor = System.Drawing.Color.White;
-            this.txtValorUnitario.Location = new System.Drawing.Point(30, 163);
-            this.txtValorUnitario.Name = "txtValorUnitario";
-            this.txtValorUnitario.Size = new System.Drawing.Size(117, 23);
-            this.txtValorUnitario.TabIndex = 54;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(27, 145);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 15);
-            this.label9.TabIndex = 53;
-            this.label9.Text = "Valor Unitário:";
-            // 
-            // txtAcrescimo
-            // 
-            this.txtAcrescimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtAcrescimo.ForeColor = System.Drawing.Color.White;
-            this.txtAcrescimo.Location = new System.Drawing.Point(386, 164);
-            this.txtAcrescimo.Name = "txtAcrescimo";
-            this.txtAcrescimo.Size = new System.Drawing.Size(119, 23);
-            this.txtAcrescimo.TabIndex = 52;
-            // 
-            // txtImposto
-            // 
-            this.txtImposto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtImposto.ForeColor = System.Drawing.Color.White;
-            this.txtImposto.Location = new System.Drawing.Point(204, 216);
-            this.txtImposto.Name = "txtImposto";
-            this.txtImposto.Size = new System.Drawing.Size(119, 23);
-            this.txtImposto.TabIndex = 65;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(201, 198);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 15);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Imposto:";
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
@@ -537,12 +540,13 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadVenda";
             this.Text = "Cadastrar Venda";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumParcelas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
