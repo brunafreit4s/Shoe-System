@@ -21,7 +21,7 @@ namespace loja
         {
             InitializeComponent();
         }
-
+    
         public void ConsultaBanco()
         {
             con.Open();
