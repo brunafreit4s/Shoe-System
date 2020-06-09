@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsProd));
-            this.numericUpDownEstoque = new System.Windows.Forms.NumericUpDown();
+            this.txtEstoque = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePickerCompra = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerCadastro = new System.Windows.Forms.DateTimePicker();
+            this.txtDtCompra = new System.Windows.Forms.DateTimePicker();
+            this.txtDtCad = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtFornecedor = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -60,23 +60,23 @@
             this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.txtCusto = new System.Windows.Forms.MaskedTextBox();
             this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEstoque)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDownEstoque
+            // txtEstoque
             // 
-            this.numericUpDownEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.numericUpDownEstoque.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownEstoque.Location = new System.Drawing.Point(485, 190);
-            this.numericUpDownEstoque.Maximum = new decimal(new int[] {
+            this.txtEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtEstoque.Location = new System.Drawing.Point(485, 190);
+            this.txtEstoque.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDownEstoque.Name = "numericUpDownEstoque";
-            this.numericUpDownEstoque.Size = new System.Drawing.Size(94, 20);
-            this.numericUpDownEstoque.TabIndex = 11;
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Size = new System.Drawing.Size(94, 20);
+            this.txtEstoque.TabIndex = 11;
             // 
             // label14
             // 
@@ -98,25 +98,25 @@
             this.label13.TabIndex = 51;
             this.label13.Text = "Código de Barras:";
             // 
-            // dateTimePickerCompra
+            // txtDtCompra
             // 
-            this.dateTimePickerCompra.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.dateTimePickerCompra.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.dateTimePickerCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCompra.Location = new System.Drawing.Point(485, 134);
-            this.dateTimePickerCompra.Name = "dateTimePickerCompra";
-            this.dateTimePickerCompra.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePickerCompra.TabIndex = 8;
+            this.txtDtCompra.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDtCompra.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDtCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDtCompra.Location = new System.Drawing.Point(485, 134);
+            this.txtDtCompra.Name = "txtDtCompra";
+            this.txtDtCompra.Size = new System.Drawing.Size(94, 20);
+            this.txtDtCompra.TabIndex = 8;
             // 
-            // dateTimePickerCadastro
+            // txtDtCad
             // 
-            this.dateTimePickerCadastro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.dateTimePickerCadastro.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.dateTimePickerCadastro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCadastro.Location = new System.Drawing.Point(485, 81);
-            this.dateTimePickerCadastro.Name = "dateTimePickerCadastro";
-            this.dateTimePickerCadastro.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePickerCadastro.TabIndex = 4;
+            this.txtDtCad.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDtCad.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDtCad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDtCad.Location = new System.Drawing.Point(485, 81);
+            this.txtDtCad.Name = "txtDtCad";
+            this.txtDtCad.Size = new System.Drawing.Size(94, 20);
+            this.txtDtCad.TabIndex = 4;
             // 
             // label12
             // 
@@ -266,19 +266,19 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Cód. Produto:";
             // 
-            // numericUpDownQuantidade
+            // txtQuantidade
             // 
-            this.numericUpDownQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.numericUpDownQuantidade.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownQuantidade.Location = new System.Drawing.Point(405, 84);
-            this.numericUpDownQuantidade.Maximum = new decimal(new int[] {
+            this.txtQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtQuantidade.ForeColor = System.Drawing.Color.White;
+            this.txtQuantidade.Location = new System.Drawing.Point(405, 84);
+            this.txtQuantidade.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDownQuantidade.Name = "numericUpDownQuantidade";
-            this.numericUpDownQuantidade.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDownQuantidade.TabIndex = 3;
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(59, 20);
+            this.txtQuantidade.TabIndex = 3;
             // 
             // label1
             // 
@@ -304,6 +304,7 @@
             this.btnLimpar.TabIndex = 14;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnConsultar
             // 
@@ -317,6 +318,7 @@
             this.btnConsultar.TabIndex = 15;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnAlterar
             // 
@@ -392,7 +394,7 @@
             this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
             this.txtCodigoBarra.Location = new System.Drawing.Point(320, 245);
-            this.txtCodigoBarra.Mask = "0000000000";
+            this.txtCodigoBarra.Mask = "0000000";
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(259, 20);
             this.txtCodigoBarra.TabIndex = 13;
@@ -404,7 +406,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(613, 346);
+            this.ClientSize = new System.Drawing.Size(613, 359);
             this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.txtPreco);
@@ -414,11 +416,11 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.numericUpDownEstoque);
+            this.Controls.Add(this.txtEstoque);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dateTimePickerCompra);
-            this.Controls.Add(this.dateTimePickerCadastro);
+            this.Controls.Add(this.txtDtCompra);
+            this.Controls.Add(this.txtDtCad);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtFornecedor);
@@ -434,14 +436,14 @@
             this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDownQuantidade);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "TelaConsProd";
             this.Text = "Consulta de Produtos";
             this.Load += new System.EventHandler(this.TelaConsProd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEstoque)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,11 +451,11 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDownEstoque;
+        private System.Windows.Forms.NumericUpDown txtEstoque;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePickerCompra;
-        private System.Windows.Forms.DateTimePicker dateTimePickerCadastro;
+        private System.Windows.Forms.DateTimePicker txtDtCompra;
+        private System.Windows.Forms.DateTimePicker txtDtCad;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtFornecedor;
@@ -469,7 +471,7 @@
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDownQuantidade;
+        private System.Windows.Forms.NumericUpDown txtQuantidade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnConsultar;
