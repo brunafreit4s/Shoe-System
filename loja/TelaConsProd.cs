@@ -158,5 +158,45 @@ namespace loja
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCodProd.Text != "")
+                {
+                    con.Open();
+                    string sql = "delete from Produto where codProd ='" + txtCodProd.Text + "'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Produto Excluído.");
+                    txtCodProd.Text = "";
+                    txtNomeProduto.Text = "";
+                    txtQuantidade.Text = "";
+                    txtDtCad.Text = "";
+                    txtPreco.Text = "";
+                    txtCusto.Text = "";
+                    txtMarca.Text = "";
+                    txtDtCompra.Text = "";
+                    txtFornecedor.Text = "";
+                    cboTipo.Text = "";
+                    txtEstoque.Text = "";
+                    txtDescricao.Text = "";
+                    txtCodigoBarra.Text = "";
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão");
+                }
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
