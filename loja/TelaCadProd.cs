@@ -30,26 +30,8 @@ namespace loja
                     {
                         if (txtCusto.Text != "")
                         {
-                            int codCombo = 0;
                             con.Open();
-
-                            if (cboTipo.Text == "Sapato")
-                            {
-                                codCombo = 1;
-                            }
-                            else if (cboTipo.Text == "Salto")
-                            {
-                                codCombo = 2;
-                            }
-                            else if (cboTipo.Text == "Tênis")
-                            {
-                                codCombo = 3;
-                            }
-                            else if (cboTipo.Text == "Bota")
-                            {
-                                codCombo = 4;
-                            }
-
+                            int codCombo = cboTipo.SelectedIndex + 1;
                             string sql = "insert into Produto(nomeProd, quantidadeProd, dataCadProd, precoProd, custoProd, marcaProd, dataCompraProd, nomeFornecedor, codTipo, estoque, descricaoProd, codigoBarras) values('" + txtNomeProduto.Text + "', '" + txtQuantidade.Text + "', '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', '" + txtPreco.Text + "', '" + txtCusto.Text + "', '" + txtMarca.Text + "', '" +Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd")+ "', '" + txtFornecedor.Text+"', '" + codCombo + "', '" + txtEstoque.Text + "', '" + txtDescricao.Text+ "', '" + txtCodigoBarra.Text + "')";
                             MySqlCommand cmd = new MySqlCommand(sql, con);
                             cmd.ExecuteNonQuery();
@@ -102,7 +84,7 @@ namespace loja
             DataTable dt = new DataTable();
             dt.Load(rdr);
             cboTipo.DisplayMember = "nomeTipo";
-            cboTipo.DataSource = dt;
+            cboTipo.DataSource = dt;            
             con.Close();
         }
     }

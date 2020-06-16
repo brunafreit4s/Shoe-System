@@ -116,5 +116,47 @@ namespace loja
                 MessageBox.Show("É nescessário um Código, ou Nome, ou Código de Barras!");
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCodProd.Text != "")
+                {
+                    con.Open();
+
+                    int codCombo = cboTipo.SelectedIndex + 1;
+                    string sql = "update Produto set nomeProd = '" + txtNomeProduto.Text + "', quantidadeProd = '" + txtQuantidade.Text + "', dataCadProd = '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', precoProd = '" + txtPreco.Text + "', custoProd = '" + txtCusto.Text + "', marcaProd = '" + txtMarca.Text + "', dataCompraProd = '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', nomeFornecedor = '" + txtFornecedor.Text + "', codTipo = '" + codCombo + "', estoque = '" + txtEstoque.Text + "', descricaoProd = '" + txtDescricao.Text + "', codigoBarras = '" + txtCodigoBarra.Text + "' where codProd ='" + txtCodProd.Text + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Produto Alterado.");
+                    txtCodProd.Text = "";
+                    txtNomeProduto.Text = "";
+                    txtQuantidade.Text = "";
+                    txtDtCad.Text = "";
+                    txtPreco.Text = "";
+                    txtCusto.Text = "";
+                    txtMarca.Text = "";
+                    txtDtCompra.Text = "";
+                    txtFornecedor.Text = "";
+                    cboTipo.Text = "";
+                    txtEstoque.Text = "";
+                    txtDescricao.Text = "";
+                    txtCodigoBarra.Text = "";
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("É nescessário digitar o Código do Produto");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

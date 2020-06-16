@@ -231,6 +231,5 @@ namespace loja
                 MessageBox.Show(ex.ToString());
             }
         }
-
     }
 }
