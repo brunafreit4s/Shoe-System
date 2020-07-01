@@ -441,6 +441,7 @@
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsProd";
             this.Text = "Consulta de Produtos";
             this.Load += new System.EventHandler(this.TelaConsProd_Load);

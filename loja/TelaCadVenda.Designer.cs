@@ -43,6 +43,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.datePagamento = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtValorTotal = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDesconto = new System.Windows.Forms.MaskedTextBox();
+            this.txtValorUnitario = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.nudNumParcelas = new System.Windows.Forms.NumericUpDown();
@@ -61,12 +67,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
-            this.txtValorUnitario = new System.Windows.Forms.MaskedTextBox();
-            this.txtDesconto = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtValorTotal = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumParcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).BeginInit();
@@ -234,6 +234,66 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Pedido";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // txtValorTotal
+            // 
+            this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtValorTotal.ForeColor = System.Drawing.Color.White;
+            this.txtValorTotal.Location = new System.Drawing.Point(334, 217);
+            this.txtValorTotal.Mask = "000.00";
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(120, 23);
+            this.txtValorTotal.TabIndex = 70;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
+            this.maskedTextBox1.Location = new System.Drawing.Point(175, 165);
+            this.maskedTextBox1.Mask = "000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(124, 23);
+            this.maskedTextBox1.TabIndex = 69;
+            // 
+            // txtDesconto
+            // 
+            this.txtDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDesconto.ForeColor = System.Drawing.Color.White;
+            this.txtDesconto.Location = new System.Drawing.Point(27, 216);
+            this.txtDesconto.Mask = "000.00";
+            this.txtDesconto.Name = "txtDesconto";
+            this.txtDesconto.Size = new System.Drawing.Size(120, 23);
+            this.txtDesconto.TabIndex = 68;
+            // 
+            // txtValorUnitario
+            // 
+            this.txtValorUnitario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtValorUnitario.ForeColor = System.Drawing.Color.White;
+            this.txtValorUnitario.Location = new System.Drawing.Point(27, 164);
+            this.txtValorUnitario.Mask = "0000.0000";
+            this.txtValorUnitario.Name = "txtValorUnitario";
+            this.txtValorUnitario.Size = new System.Drawing.Size(120, 23);
+            this.txtValorUnitario.TabIndex = 67;
+            // 
+            // txtCodigoBarra
+            // 
+            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
+            this.txtCodigoBarra.Location = new System.Drawing.Point(27, 110);
+            this.txtCodigoBarra.Mask = "0000000000";
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(120, 23);
+            this.txtCodigoBarra.TabIndex = 66;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodigo.ForeColor = System.Drawing.Color.White;
+            this.txtCodigo.Location = new System.Drawing.Point(27, 53);
+            this.txtCodigo.Mask = "0000";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(120, 23);
+            this.txtCodigo.TabIndex = 31;
             // 
             // label7
             // 
@@ -425,66 +485,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(17, 491);
             this.vScrollBar1.TabIndex = 23;
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodigo.ForeColor = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(27, 53);
-            this.txtCodigo.Mask = "0000";
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(120, 23);
-            this.txtCodigo.TabIndex = 31;
-            // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodigoBarra.ForeColor = System.Drawing.Color.White;
-            this.txtCodigoBarra.Location = new System.Drawing.Point(27, 110);
-            this.txtCodigoBarra.Mask = "0000000000";
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(120, 23);
-            this.txtCodigoBarra.TabIndex = 66;
-            // 
-            // txtValorUnitario
-            // 
-            this.txtValorUnitario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtValorUnitario.ForeColor = System.Drawing.Color.White;
-            this.txtValorUnitario.Location = new System.Drawing.Point(27, 164);
-            this.txtValorUnitario.Mask = "0000.0000";
-            this.txtValorUnitario.Name = "txtValorUnitario";
-            this.txtValorUnitario.Size = new System.Drawing.Size(120, 23);
-            this.txtValorUnitario.TabIndex = 67;
-            // 
-            // txtDesconto
-            // 
-            this.txtDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtDesconto.ForeColor = System.Drawing.Color.White;
-            this.txtDesconto.Location = new System.Drawing.Point(27, 216);
-            this.txtDesconto.Mask = "000.00";
-            this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(120, 23);
-            this.txtDesconto.TabIndex = 68;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
-            this.maskedTextBox1.Location = new System.Drawing.Point(175, 165);
-            this.maskedTextBox1.Mask = "000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(124, 23);
-            this.maskedTextBox1.TabIndex = 69;
-            // 
-            // txtValorTotal
-            // 
-            this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtValorTotal.ForeColor = System.Drawing.Color.White;
-            this.txtValorTotal.Location = new System.Drawing.Point(334, 217);
-            this.txtValorTotal.Mask = "000.00";
-            this.txtValorTotal.Name = "txtValorTotal";
-            this.txtValorTotal.Size = new System.Drawing.Size(120, 23);
-            this.txtValorTotal.TabIndex = 70;
-            // 
             // TelaCadVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -509,6 +509,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadVenda";
             this.Text = "Cadastrar Venda";
             this.groupBox2.ResumeLayout(false);

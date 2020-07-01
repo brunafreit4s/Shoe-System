@@ -16,5 +16,10 @@ namespace loja
         {
             InitializeComponent();
         }
+
+        private void TelaConsVenda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -368,6 +368,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 9.25F);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadProd";
             this.Text = "Cadastrar Produtos";
             this.Load += new System.EventHandler(this.TelaCadProd_Load);

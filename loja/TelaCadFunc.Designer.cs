@@ -455,7 +455,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(587, 372);
+            this.ClientSize = new System.Drawing.Size(587, 378);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtNumEndereco);
             this.Controls.Add(this.txtTelefone);

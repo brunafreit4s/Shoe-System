@@ -43,11 +43,11 @@
             this.menuCadVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNomeLogado = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblCpf = new System.Windows.Forms.Label();
             this.txtCodRestric = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNomeLogado = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,39 +185,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Seja Bem Vindo";
             // 
-            // lblNomeLogado
-            // 
-            this.lblNomeLogado.AutoSize = true;
-            this.lblNomeLogado.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeLogado.Font = new System.Drawing.Font("Corbel", 14F);
-            this.lblNomeLogado.Location = new System.Drawing.Point(140, 144);
-            this.lblNomeLogado.Name = "lblNomeLogado";
-            this.lblNomeLogado.Size = new System.Drawing.Size(63, 23);
-            this.lblNomeLogado.TabIndex = 2;
-            this.lblNomeLogado.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("Corbel", 10.25F);
-            this.txtNome.ForeColor = System.Drawing.Color.White;
-            this.txtNome.Location = new System.Drawing.Point(209, 144);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(289, 24);
-            this.txtNome.TabIndex = 3;
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.BackColor = System.Drawing.Color.Transparent;
-            this.lblCpf.Font = new System.Drawing.Font("Corbel", 14F);
-            this.lblCpf.Location = new System.Drawing.Point(140, 174);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(47, 23);
-            this.lblCpf.TabIndex = 4;
-            this.lblCpf.Text = "CPF:";
-            // 
             // txtCodRestric
             // 
             this.txtCodRestric.AutoSize = true;
@@ -232,11 +199,44 @@
             // 
             this.txtCpf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtCpf.ForeColor = System.Drawing.Color.White;
-            this.txtCpf.Location = new System.Drawing.Point(209, 179);
+            this.txtCpf.Location = new System.Drawing.Point(169, 220);
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(289, 21);
-            this.txtCpf.TabIndex = 66;
+            this.txtCpf.TabIndex = 70;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.BackColor = System.Drawing.Color.Transparent;
+            this.lblCpf.Font = new System.Drawing.Font("Corbel", 14F);
+            this.lblCpf.Location = new System.Drawing.Point(165, 194);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(47, 23);
+            this.lblCpf.TabIndex = 69;
+            this.lblCpf.Text = "CPF:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtNome.Enabled = false;
+            this.txtNome.Font = new System.Drawing.Font("Corbel", 10.25F);
+            this.txtNome.ForeColor = System.Drawing.Color.White;
+            this.txtNome.Location = new System.Drawing.Point(169, 165);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(289, 24);
+            this.txtNome.TabIndex = 68;
+            // 
+            // lblNomeLogado
+            // 
+            this.lblNomeLogado.AutoSize = true;
+            this.lblNomeLogado.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeLogado.Font = new System.Drawing.Font("Corbel", 14F);
+            this.lblNomeLogado.Location = new System.Drawing.Point(165, 139);
+            this.lblNomeLogado.Name = "lblNomeLogado";
+            this.lblNomeLogado.Size = new System.Drawing.Size(63, 23);
+            this.lblNomeLogado.TabIndex = 67;
+            this.lblNomeLogado.Text = "Nome:";
             // 
             // TelaPrincipal
             // 
@@ -247,10 +247,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(631, 296);
             this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtCodRestric);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNomeLogado);
+            this.Controls.Add(this.txtCodRestric);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Corbel", 8.25F);
@@ -283,10 +283,10 @@
         public System.Windows.Forms.ToolStripMenuItem menuCadVenda;
         public System.Windows.Forms.ToolStripMenuItem menuConsVenda;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblNomeLogado;
-        public System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblCpf;
         public System.Windows.Forms.Label txtCodRestric;
         public System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.Label lblCpf;
+        public System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblNomeLogado;
     }
 }
