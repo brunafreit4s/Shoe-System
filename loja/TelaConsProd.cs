@@ -72,19 +72,7 @@ namespace loja
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtCodProd.Text = "";
-            txtNomeProduto.Text = "";
-            txtQuantidade.Text = "";
-            txtDtCad.Text = "";
-            txtPreco.Text = "";
-            txtCusto.Text = "";
-            txtMarca.Text = "";
-            txtDtCompra.Text = "";
-            txtFornecedor.Text = "";
-            cboTipo.Text = "";
-            txtEstoque.Text = "";
-            txtDescricao.Text = "";
-            txtCodigoBarra.Text = "";
+            limparTela();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -131,19 +119,7 @@ namespace loja
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto Alterado.");
-                    txtCodProd.Text = "";
-                    txtNomeProduto.Text = "";
-                    txtQuantidade.Text = "";
-                    txtDtCad.Text = "";
-                    txtPreco.Text = "";
-                    txtCusto.Text = "";
-                    txtMarca.Text = "";
-                    txtDtCompra.Text = "";
-                    txtFornecedor.Text = "";
-                    cboTipo.Text = "";
-                    txtEstoque.Text = "";
-                    txtDescricao.Text = "";
-                    txtCodigoBarra.Text = "";
+                    limparTela();
                     con.Close();
                 }
                 else
@@ -172,19 +148,7 @@ namespace loja
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto Excluído.");
-                    txtCodProd.Text = "";
-                    txtNomeProduto.Text = "";
-                    txtQuantidade.Text = "";
-                    txtDtCad.Text = "";
-                    txtPreco.Text = "";
-                    txtCusto.Text = "";
-                    txtMarca.Text = "";
-                    txtDtCompra.Text = "";
-                    txtFornecedor.Text = "";
-                    cboTipo.Text = "";
-                    txtEstoque.Text = "";
-                    txtDescricao.Text = "";
-                    txtCodigoBarra.Text = "";
+                    limparTela();
                     con.Close();
                 }
                 else
@@ -197,6 +161,22 @@ namespace loja
                 con.Close();
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        public void limparTela() {
+            txtCodProd.Text = "";
+            txtNomeProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtDtCad.Text = "";
+            txtPreco.Text = "";
+            txtCusto.Text = "";
+            txtMarca.Text = "";
+            txtDtCompra.Text = "";
+            txtFornecedor.Text = "";
+            cboTipo.Text = "";
+            txtEstoque.Text = "";
+            txtDescricao.Text = "";
+            txtCodigoBarra.Text = "";
         }
     }
 }

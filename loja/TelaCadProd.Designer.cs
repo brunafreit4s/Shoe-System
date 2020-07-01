@@ -47,8 +47,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtDtCad = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtEstoque = new System.Windows.Forms.NumericUpDown();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
             this.txtPreco = new System.Windows.Forms.MaskedTextBox();
@@ -56,7 +54,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDtCompra = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -244,30 +241,6 @@
             this.label13.TabIndex = 25;
             this.label13.Text = "Código de Barras:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(472, 160);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 15);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Estoque:";
-            // 
-            // txtEstoque
-            // 
-            this.txtEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtEstoque.Location = new System.Drawing.Point(475, 178);
-            this.txtEstoque.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(94, 23);
-            this.txtEstoque.TabIndex = 10;
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
@@ -344,8 +317,6 @@
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.txtEstoque);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDtCompra);
             this.Controls.Add(this.txtDtCad);
@@ -373,7 +344,6 @@
             this.Text = "Cadastrar Produtos";
             this.Load += new System.EventHandler(this.TelaCadProd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,8 +369,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker txtDtCad;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown txtEstoque;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.MaskedTextBox txtCodigoBarra;
         private System.Windows.Forms.MaskedTextBox txtPreco;

@@ -30,26 +30,9 @@ namespace loja
                     {
                         if (txtCusto.Text != "")
                         {
-                            con.Open();
-                            int codCombo = cboTipo.SelectedIndex + 1;
-                            string sql = "insert into Produto(nomeProd, quantidadeProd, dataCadProd, precoProd, custoProd, marcaProd, dataCompraProd, nomeFornecedor, codTipo, estoque, descricaoProd, codigoBarras) values('" + txtNomeProduto.Text + "', '" + txtQuantidade.Text + "', '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', '" + txtPreco.Text + "', '" + txtCusto.Text + "', '" + txtMarca.Text + "', '" +Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd")+ "', '" + txtFornecedor.Text+"', '" + codCombo + "', '" + txtEstoque.Text + "', '" + txtDescricao.Text+ "', '" + txtCodigoBarra.Text + "')";
-                            MySqlCommand cmd = new MySqlCommand(sql, con);
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Produto Cadastrado.");
-                            txtNomeProduto.Text = "";
-                            txtQuantidade.Text = "";
-                            txtDtCad.Text = "";
-                            txtPreco.Text = "";
-                            txtCusto.Text = "";
-                            txtMarca.Text = "";
-                            txtDtCompra.Text = "";
-                            txtFornecedor.Text = "";
-                            cboTipo.Text = "";
-                            txtEstoque.Text = "";
-                            txtDescricao.Text = "";
-                            txtCodigoBarra.Text = "";
-                            con.Close();
+                            incluirProd();
+                            incluirProdEstoque();
+                            limparTela();                            
                         }
                         else
                         {
@@ -71,6 +54,40 @@ namespace loja
                 con.Close();
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        public void incluirProd() {
+            con.Open();
+            int codCombo = cboTipo.SelectedIndex + 1;
+            string sql = "insert into Produto(nomeProd, quantidadeProd, dataCadProd, precoProd, custoProd, marcaProd, dataCompraProd, nomeFornecedor, codTipo, descricaoProd, codigoBarras) values('" + txtNomeProduto.Text + "', '" + txtQuantidade.Text + "', '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', '" + txtPreco.Text + "', '" + txtCusto.Text + "', '" + txtMarca.Text + "', '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', '" + txtFornecedor.Text + "', '" + codCombo + "', '" + txtDescricao.Text + "', '" + txtCodigoBarra.Text + "')";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Produto Cadastrado.");            
+            con.Close();
+        }
+
+        public void incluirProdEstoque() {
+            con.Open();
+            int codCombo = cboTipo.SelectedIndex + 1;
+            string sql = "insert into Estoque(nomeProdEstoq, quantidadeProdEstoq, precoProdEstoq, marcaProdEstoq, codTipoProdEstoq) values('" + txtNomeProduto.Text + "', '" + Convert.ToInt32(txtQuantidade.Text) + "', '" + txtPreco.Text + "', '" + txtMarca.Text + "', '" + codCombo + "')";            
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void limparTela() {
+            txtNomeProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtDtCad.Text = "";
+            txtPreco.Text = "";
+            txtCusto.Text = "";
+            txtMarca.Text = "";
+            txtDtCompra.Text = "";
+            txtFornecedor.Text = "";
+            cboTipo.Text = "";
+            txtDescricao.Text = "";
+            txtCodigoBarra.Text = "";
         }
 
         private void TelaCadProd_Load(object sender, EventArgs e)

@@ -105,6 +105,8 @@ namespace loja
 
                     if (retorno == true)
                     {
+                        Form.txtCpf.Enabled = false;
+                        Form.txtNome.Enabled = false;
                         AcessarTelaPrincipal();
                     }
                     else
