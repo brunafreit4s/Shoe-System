@@ -39,58 +39,52 @@ namespace loja
         {
             try
             {
-                if (txtNome.Text != "")
+                if (txtNome.Text == "")
                 {
-                    if (txtCpf.Text != "")
-                    {
-                        if (txtLogin.Text != "")
-                        {
-                            int codCombo = 0;
-                            con.Open();
-
-                            if (comboCargo.Text == "Atendente")
-                            {
-                                codCombo = 2;
-                            }
-                            else if (comboCargo.Text == "Gerente")
-                            {
-                                codCombo = 1;
-                            }
-                            string sql = "insert into funcionario(nomeCargo, nomeFunc, cpf, RG, endereco, dataNascimento, codRestricao, telefone, celular, numeroEndereco, cidade, UF, email, bairro, CEP, login, senha) values('" + comboCargo.Text + "', '" + txtNome.Text + "', '" + txtCpf.Text + "', '" + txtRg.Text + "', '" + txtEndereco.Text + "', '" + Convert.ToDateTime(txtDataNasc.Text).ToString("yyyy/MM/dd") + "', '" + codCombo + "', '" + txtTelefone.Text + "', '" + txtCelular.Text + "', '" + txtNumEndereco.Text + "', '" + txtCidade.Text + "', '" + txtUf.Text + "', '" + txtEmail.Text + "', '" + txtBairro.Text + "', '" + txtCep.Text + "', '" + txtLogin.Text + "', '" + txtSenha.Text + "')";
-                            MySqlCommand cmd = new MySqlCommand(sql, con);
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Funcionário Cadastrado.");
-                            txtBairro.Text = "";
-                            txtCelular.Text = "";
-                            txtCep.Text = "";
-                            txtCidade.Text = "";
-                            txtCpf.Text = "";
-                            txtDataNasc.Text = "";
-                            txtEmail.Text = "";
-                            txtEndereco.Text = "";
-                            txtLogin.Text = "";
-                            txtNome.Text = "";
-                            txtNumEndereco.Text = "";
-                            txtRg.Text = "";
-                            txtSenha.Text = "";
-                            txtTelefone.Text = "";
-                            txtUf.Text = "";
-                            con.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("É necessário digitar um login de acesso ao Sistema");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("É necessário digitar um CPF");
-                    }
+                    MessageBox.Show("É necessário digitar um Nome");
+                }
+                else if (txtCpf.Text == "")
+                {
+                    MessageBox.Show("É necessário digitar um CPF");
+                }
+                else if (txtLogin.Text == "")
+                {
+                    MessageBox.Show("É necessário digitar um login de acesso ao Sistema");
                 }
                 else
                 {
-                    MessageBox.Show("É necessário digitar um Nome");
+                    int codCombo = 0;
+                    con.Open();
+
+                    if (comboCargo.Text == "Atendente")
+                    {
+                        codCombo = 2;
+                    }
+                    else if (comboCargo.Text == "Gerente")
+                    {
+                        codCombo = 1;
+                    }
+                    string sql = "insert into funcionario(nomeCargo, nomeFunc, cpf, RG, endereco, dataNascimento, codRestricao, telefone, celular, numeroEndereco, cidade, UF, email, bairro, CEP, login, senha) values('" + comboCargo.Text + "', '" + txtNome.Text + "', '" + txtCpf.Text + "', '" + txtRg.Text + "', '" + txtEndereco.Text + "', '" + Convert.ToDateTime(txtDataNasc.Text).ToString("yyyy/MM/dd") + "', '" + codCombo + "', '" + txtTelefone.Text + "', '" + txtCelular.Text + "', '" + txtNumEndereco.Text + "', '" + txtCidade.Text + "', '" + txtUf.Text + "', '" + txtEmail.Text + "', '" + txtBairro.Text + "', '" + txtCep.Text + "', '" + txtLogin.Text + "', '" + txtSenha.Text + "')";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Funcionário Cadastrado.");
+                    txtBairro.Text = "";
+                    txtCelular.Text = "";
+                    txtCep.Text = "";
+                    txtCidade.Text = "";
+                    txtCpf.Text = "";
+                    txtDataNasc.Text = "";
+                    txtEmail.Text = "";
+                    txtEndereco.Text = "";
+                    txtLogin.Text = "";
+                    txtNome.Text = "";
+                    txtNumEndereco.Text = "";
+                    txtRg.Text = "";
+                    txtSenha.Text = "";
+                    txtTelefone.Text = "";
+                    txtUf.Text = "";
+                    con.Close();
                 }
             }
             catch (Exception ex)

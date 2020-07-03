@@ -37,7 +37,6 @@
             this.menuCadProd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsProd = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCadVenda = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,27 +122,17 @@
             // estoqueToolStripMenuItem
             // 
             this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCadEstoque,
             this.menuConsEstoque});
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
             this.estoqueToolStripMenuItem.Text = "Estoque";
-            // 
-            // menuCadEstoque
-            // 
-            this.menuCadEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.menuCadEstoque.ForeColor = System.Drawing.Color.White;
-            this.menuCadEstoque.Name = "menuCadEstoque";
-            this.menuCadEstoque.Size = new System.Drawing.Size(134, 22);
-            this.menuCadEstoque.Text = "Cadastrar";
-            this.menuCadEstoque.Click += new System.EventHandler(this.cadastrarToolStripMenuItem2_Click);
             // 
             // menuConsEstoque
             // 
             this.menuConsEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuConsEstoque.ForeColor = System.Drawing.Color.White;
             this.menuConsEstoque.Name = "menuConsEstoque";
-            this.menuConsEstoque.Size = new System.Drawing.Size(134, 22);
+            this.menuConsEstoque.Size = new System.Drawing.Size(152, 22);
             this.menuConsEstoque.Text = "Consultar";
             this.menuConsEstoque.Click += new System.EventHandler(this.consultarToolStripMenuItem2_Click);
             // 
@@ -277,7 +266,6 @@
         public System.Windows.Forms.ToolStripMenuItem menuCadProd;
         public System.Windows.Forms.ToolStripMenuItem menuConsProd;
         private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem menuCadEstoque;
         public System.Windows.Forms.ToolStripMenuItem menuConsEstoque;
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem menuCadVenda;

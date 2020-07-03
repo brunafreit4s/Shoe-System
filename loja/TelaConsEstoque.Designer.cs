@@ -38,12 +38,11 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtCodProd = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDownQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).BeginInit();
+            this.txtQuantidade = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +60,7 @@
             // txtNomeItem
             // 
             this.txtNomeItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtNomeItem.Enabled = false;
             this.txtNomeItem.Location = new System.Drawing.Point(143, 82);
             this.txtNomeItem.Name = "txtNomeItem";
             this.txtNomeItem.Size = new System.Drawing.Size(180, 23);
@@ -93,6 +93,7 @@
             // txtMarca
             // 
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtMarca.Enabled = false;
             this.txtMarca.Location = new System.Drawing.Point(32, 145);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(240, 23);
@@ -113,6 +114,7 @@
             // txtPreco
             // 
             this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtPreco.Enabled = false;
             this.txtPreco.Location = new System.Drawing.Point(454, 82);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(76, 23);
@@ -121,6 +123,7 @@
             // txtCodProd
             // 
             this.txtCodProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCodProd.Enabled = false;
             this.txtCodProd.ForeColor = System.Drawing.Color.White;
             this.txtCodProd.Location = new System.Drawing.Point(32, 82);
             this.txtCodProd.Mask = "0000";
@@ -128,7 +131,6 @@
             this.txtCodProd.Size = new System.Drawing.Size(79, 23);
             this.txtCodProd.TabIndex = 31;
             this.txtCodProd.ValidatingType = typeof(int);
-            this.txtCodProd.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCodProd_MaskInputRejected);
             // 
             // label5
             // 
@@ -139,20 +141,6 @@
             this.label5.Size = new System.Drawing.Size(38, 15);
             this.label5.TabIndex = 33;
             this.label5.Text = "Qtde:";
-            // 
-            // numericUpDownQuantidade
-            // 
-            this.numericUpDownQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.numericUpDownQuantidade.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownQuantidade.Location = new System.Drawing.Point(355, 82);
-            this.numericUpDownQuantidade.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownQuantidade.Name = "numericUpDownQuantidade";
-            this.numericUpDownQuantidade.Size = new System.Drawing.Size(66, 23);
-            this.numericUpDownQuantidade.TabIndex = 32;
             // 
             // label6
             // 
@@ -167,6 +155,7 @@
             // cboTipo
             // 
             this.cboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.cboTipo.Enabled = false;
             this.cboTipo.ForeColor = System.Drawing.Color.White;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Location = new System.Drawing.Point(303, 145);
@@ -189,12 +178,25 @@
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPesquisar.Font = new System.Drawing.Font("Corbel", 9.25F, System.Drawing.FontStyle.Bold);
             this.btnPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.btnPesquisar.Location = new System.Drawing.Point(240, 207);
+            this.btnPesquisar.Location = new System.Drawing.Point(225, 229);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(109, 27);
+            this.btnPesquisar.Size = new System.Drawing.Size(109, 35);
             this.btnPesquisar.TabIndex = 37;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtQuantidade.Enabled = false;
+            this.txtQuantidade.ForeColor = System.Drawing.Color.White;
+            this.txtQuantidade.Location = new System.Drawing.Point(355, 82);
+            this.txtQuantidade.Mask = "0000";
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(79, 23);
+            this.txtQuantidade.TabIndex = 38;
+            this.txtQuantidade.ValidatingType = typeof(int);
             // 
             // TelaConsEstoque
             // 
@@ -204,12 +206,12 @@
             this.BackgroundImage = global::loja.Properties.Resources.TelaEstoque;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(562, 347);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cboTipo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDownQuantidade);
             this.Controls.Add(this.txtCodProd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPreco);
@@ -223,7 +225,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsEstoque";
             this.Text = "Consultar Estoque";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,10 +241,10 @@
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.MaskedTextBox txtCodProd;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDownQuantidade;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.MaskedTextBox txtQuantidade;
     }
 }

@@ -45,13 +45,6 @@ namespace loja
             Visible = true;
         }
 
-        private void cadastrarToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            TelaCadEstoque Form = new TelaCadEstoque();
-            Form.Show();
-            Visible = true;
-        }
-
         private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             TelaConsEstoque Form = new TelaConsEstoque();

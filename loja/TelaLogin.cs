@@ -38,7 +38,6 @@ namespace loja
                 Form.menuConsProd.Enabled = true;
                 Form.menuCadVenda.Enabled = true;
                 Form.menuConsVenda.Enabled = true;
-                Form.menuCadEstoque.Enabled = true;
                 Form.menuConsEstoque.Enabled = true;
             }
             else
@@ -49,7 +48,6 @@ namespace loja
                 Form.menuConsProd.Enabled = true;
                 Form.menuCadVenda.Enabled = false;
                 Form.menuConsVenda.Enabled = true;
-                Form.menuCadEstoque.Enabled = false;
                 Form.menuConsEstoque.Enabled = true;
             }
         }
@@ -97,8 +95,14 @@ namespace loja
         private void btnLogar_Click(object sender, EventArgs e)
         {
             Form = new TelaPrincipal();
-            if (txtLogin.Text != "" && txtSenha.Text != "")
+            if (txtLogin.Text == "")
             {
+                MessageBox.Show("Digite um Login");
+            }
+            else if(txtSenha.Text == "") {
+                MessageBox.Show("Digite uma Senha");
+            }
+            else {
                 try
                 { //Tratando erro na conexão com o banco
                     ConexaoBanco();
@@ -119,11 +123,6 @@ namespace loja
                     MessageBox.Show(ex.ToString());
                 }
             }
-            else
-            {
-                MessageBox.Show("Digite um Login e uma Senha");
-            }
-
         }
     }
 }

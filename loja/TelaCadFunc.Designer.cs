@@ -56,13 +56,13 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtNumEndereco = new System.Windows.Forms.MaskedTextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataNasc = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // txtNome
@@ -377,17 +377,6 @@
             this.label17.TabIndex = 19;
             this.label17.Text = "Cadastro de Funcionário";
             // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtDataNasc.ForeColor = System.Drawing.Color.White;
-            this.txtDataNasc.Location = new System.Drawing.Point(447, 60);
-            this.txtDataNasc.Mask = "00/00/0000";
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(117, 23);
-            this.txtDataNasc.TabIndex = 2;
-            this.txtDataNasc.ValidatingType = typeof(System.DateTime);
-            // 
             // txtRg
             // 
             this.txtRg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
@@ -448,6 +437,16 @@
             this.txtCelular.Size = new System.Drawing.Size(100, 23);
             this.txtCelular.TabIndex = 7;
             // 
+            // txtDataNasc
+            // 
+            this.txtDataNasc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDataNasc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDataNasc.Location = new System.Drawing.Point(447, 57);
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.Size = new System.Drawing.Size(94, 23);
+            this.txtDataNasc.TabIndex = 20;
+            // 
             // TelaCadFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -456,13 +455,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(587, 378);
+            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtNumEndereco);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
@@ -529,12 +528,12 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.MaskedTextBox txtDataNasc;
         private System.Windows.Forms.MaskedTextBox txtRg;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtNumEndereco;
         private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.DateTimePicker txtDataNasc;
     }
 }

@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TelaCadEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaCadEstoque.Designer.cs">
-      <DependentUpon>TelaCadEstoque.cs</DependentUpon>
-    </Compile>
     <Compile Include="TelaCadFunc.cs">
       <SubType>Form</SubType>
     </Compile>

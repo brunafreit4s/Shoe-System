@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsProd));
-            this.txtEstoque = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtDtCompra = new System.Windows.Forms.DateTimePicker();
@@ -60,23 +59,9 @@
             this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.txtCusto = new System.Windows.Forms.MaskedTextBox();
             this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).BeginInit();
+            this.txtEstoque = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtEstoque
-            // 
-            this.txtEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtEstoque.Location = new System.Drawing.Point(485, 190);
-            this.txtEstoque.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.Size = new System.Drawing.Size(94, 20);
-            this.txtEstoque.TabIndex = 11;
             // 
             // label14
             // 
@@ -401,6 +386,18 @@
             this.txtCodigoBarra.Size = new System.Drawing.Size(259, 20);
             this.txtCodigoBarra.TabIndex = 13;
             // 
+            // txtEstoque
+            // 
+            this.txtEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtEstoque.Enabled = false;
+            this.txtEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtEstoque.Location = new System.Drawing.Point(485, 190);
+            this.txtEstoque.Mask = "0000";
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Size = new System.Drawing.Size(94, 20);
+            this.txtEstoque.TabIndex = 60;
+            this.txtEstoque.ValidatingType = typeof(int);
+            // 
             // TelaConsProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,6 +406,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(613, 359);
+            this.Controls.Add(this.txtEstoque);
             this.Controls.Add(this.txtCodigoBarra);
             this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.txtPreco);
@@ -418,7 +416,6 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.txtEstoque);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDtCompra);
@@ -445,7 +442,6 @@
             this.Name = "TelaConsProd";
             this.Text = "Consulta de Produtos";
             this.Load += new System.EventHandler(this.TelaConsProd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -453,8 +449,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown txtEstoque;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker txtDtCompra;
@@ -485,5 +479,6 @@
         private System.Windows.Forms.MaskedTextBox txtPreco;
         private System.Windows.Forms.MaskedTextBox txtCusto;
         private System.Windows.Forms.MaskedTextBox txtCodigoBarra;
+        private System.Windows.Forms.MaskedTextBox txtEstoque;
     }
 }

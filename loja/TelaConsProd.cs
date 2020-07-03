@@ -26,7 +26,7 @@ namespace loja
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select a.*, b.nomeTipo from Produto a, TipoProduto b where a.codTipo = b.codTipo and a.codProd='" + txtCodProd.Text + "'";
+            cmd.CommandText = "Select a.*, b.nomeTipo, c.fk_codProd from Produto a, TipoProduto b, Estoque c where a.codTipo = b.codTipo and a.codProd='" + txtCodProd.Text + "' and c.fk_codProd ='" + txtCodProd.Text + "' ";
             MySqlDataReader rdr = cmd.ExecuteReader();
 
             if (rdr.Read())
@@ -40,10 +40,10 @@ namespace loja
                 txtMarca.Text = rdr[6].ToString();
                 txtDtCompra.Text = rdr[7].ToString();
                 txtFornecedor.Text = rdr[8].ToString();
-                cboTipo.Text = rdr[13].ToString();
-                txtEstoque.Text = rdr[10].ToString();
-                txtDescricao.Text = rdr[11].ToString();
-                txtCodigoBarra.Text = rdr[12].ToString();
+                cboTipo.Text = rdr[12].ToString();
+                txtEstoque.Text = rdr[13].ToString();
+                txtDescricao.Text = rdr[10].ToString();
+                txtCodigoBarra.Text = rdr[11].ToString();
                 retorno = true;
             }
             else
@@ -77,7 +77,11 @@ namespace loja
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txtCodProd.Text != "")
+            if (txtCodProd.Text == "")
+            {
+                MessageBox.Show("É nescessário um Código, ou Nome, ou Código de Barras!");
+            }
+            else
             {
                 try
                 {
@@ -99,32 +103,39 @@ namespace loja
                     MessageBox.Show(ex.ToString());
                 }
             }
-            else
-            {
-                MessageBox.Show("É nescessário um Código, ou Nome, ou Código de Barras!");
-            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtCodProd.Text != "")
+                if (txtCodProd.Text == "")
+                {
+                    MessageBox.Show("É nescessário digitar o Código do Produto");
+                }
+                else if (Convert.ToInt32(txtQuantidade.Text) >= 0)
                 {
                     con.Open();
-
                     int codCombo = cboTipo.SelectedIndex + 1;
                     string sql = "update Produto set nomeProd = '" + txtNomeProduto.Text + "', quantidadeProd = '" + txtQuantidade.Text + "', dataCadProd = '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', precoProd = '" + txtPreco.Text + "', custoProd = '" + txtCusto.Text + "', marcaProd = '" + txtMarca.Text + "', dataCompraProd = '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', nomeFornecedor = '" + txtFornecedor.Text + "', codTipo = '" + codCombo + "', estoque = '" + txtEstoque.Text + "', descricaoProd = '" + txtDescricao.Text + "', codigoBarras = '" + txtCodigoBarra.Text + "' where codProd ='" + txtCodProd.Text + "'";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
-
                     MessageBox.Show("Produto Alterado.");
-                    limparTela();
                     con.Close();
+                    limparTela();
                 }
                 else
                 {
-                    MessageBox.Show("É nescessário digitar o Código do Produto");
+                    if (MessageBox.Show("A quantidade de Produto é igual a 0. Deseja Excluir o Produto do Estoque?", "Confirmação",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //tem que executar o Delte na tabela de Estoque 
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Atenção! O Produto não foi Deletado do Estoque e não pode ser Alterado com o valor da quantidade igual a 0!");
+                    }
                 }
 
             }
@@ -137,33 +148,33 @@ namespace loja
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            try
+            if (txtCodProd.Text == "")
             {
-                if (txtCodProd.Text != "")
+                MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão");
+            }
+            else
+            {
+                try
                 {
                     con.Open();
                     string sql = "delete from Produto where codProd ='" + txtCodProd.Text + "'";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
-
                     MessageBox.Show("Produto Excluído.");
-                    limparTela();
                     con.Close();
+                    limparTela();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão");
+                    con.Close();
+                    MessageBox.Show(ex.ToString());
                 }
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-                MessageBox.Show(ex.ToString());
             }
         }
 
-        public void limparTela() {
+        public void limparTela()
+        {
             txtCodProd.Text = "";
             txtNomeProduto.Text = "";
             txtQuantidade.Text = "";

@@ -14,6 +14,7 @@ namespace loja
     public partial class TelaCadProd : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        int codProd;
 
         public TelaCadProd()
         {
@@ -24,29 +25,27 @@ namespace loja
         {
             try
             {
-                if (txtNomeProduto.Text != "")
+                if (txtNomeProduto.Text == "")
                 {
-                    if (txtPreco.Text != "")
-                    {
-                        if (txtCusto.Text != "")
-                        {
-                            incluirProd();
-                            incluirProdEstoque();
-                            limparTela();                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("É necessário digitar o Custo");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("É necessário digitar um Preço");
-                    }
+                    MessageBox.Show("É necessário digitar Nome do Produto");                    
+                }
+                else if (txtPreco.Text == "   ,")
+                {
+                    MessageBox.Show("É necessário digitar um Preço");
+                }
+                else if (txtCusto.Text == "   ,")
+                {
+                    MessageBox.Show("É necessário digitar o Custo");
+                }
+                else if (cboTipo.SelectedIndex == 0)
+                {
+                    MessageBox.Show("É necessário selecionar um Tipo de Produto");
                 }
                 else
                 {
-                    MessageBox.Show("É necessário digitar Nome do Produto");
+                    incluirProdEstoque();
+                    incluirProd();
+                    limparTela();
                 }
             }
             catch (Exception ex)
@@ -54,6 +53,27 @@ namespace loja
                 con.Close();
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        public void codProduto() { //Pega o código do Produto para cadastrar no Estoque
+            con.Open();
+            MySqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select codProd from Produto";
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            codProd = rdr.FieldCount;
+            con.Close();
+        }
+
+        public void incluirProdEstoque() {
+            codProduto();
+                        
+            con.Open();
+            int codCombo = cboTipo.SelectedIndex + 1;
+            string sql = "insert into Estoque(nomeProdEstoq, quantidadeProdEstoq, precoProdEstoq, marcaProdEstoq, codTipoProdEstoq, fk_codProd) values('" + txtNomeProduto.Text + "', '" + Convert.ToInt32(txtQuantidade.Text) + "', '" + txtPreco.Text + "', '" + txtMarca.Text + "', '" + codCombo + "', '" + codProd + "')";            
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public void incluirProd() {
@@ -67,14 +87,6 @@ namespace loja
             con.Close();
         }
 
-        public void incluirProdEstoque() {
-            con.Open();
-            int codCombo = cboTipo.SelectedIndex + 1;
-            string sql = "insert into Estoque(nomeProdEstoq, quantidadeProdEstoq, precoProdEstoq, marcaProdEstoq, codTipoProdEstoq) values('" + txtNomeProduto.Text + "', '" + Convert.ToInt32(txtQuantidade.Text) + "', '" + txtPreco.Text + "', '" + txtMarca.Text + "', '" + codCombo + "')";            
-            MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
 
         public void limparTela() {
             txtNomeProduto.Text = "";
