@@ -22,7 +22,26 @@ namespace loja
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = lista();
+            if (txtCodProd.Text != "")
+            {
+                dataGridView1.DataSource = listaCodProd();
+            }
+            else
+            {
+                dataGridView1.DataSource = lista();
+            }
+        }
+
+        public DataTable listaCodProd() {
+            con.Open();
+            MySqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select a.codEstoque As Código, a.nomeProdEstoq As Nome, a.quantidadeProdEstoq As Quantidade, a.precoProdEstoq As Preço, a.marcaProdEstoq As Marca, b.nomeTipo As Tipo from Estoque a, TipoProduto b, Produto c where a.codTipoProdEstoq = b.codTipo and a.fk_codProd = '" + txtCodProd.Text + "'";
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(rdr);
+            con.Close();
+            return dt;
         }
 
         public DataTable lista()

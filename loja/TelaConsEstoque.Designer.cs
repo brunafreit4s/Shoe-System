@@ -79,13 +79,12 @@
             // txtCodProd
             // 
             this.txtCodProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCodProd.Enabled = false;
             this.txtCodProd.ForeColor = System.Drawing.Color.White;
             this.txtCodProd.Location = new System.Drawing.Point(52, 82);
             this.txtCodProd.Mask = "0000";
             this.txtCodProd.Name = "txtCodProd";
             this.txtCodProd.Size = new System.Drawing.Size(79, 23);
-            this.txtCodProd.TabIndex = 31;
+            this.txtCodProd.TabIndex = 1;
             this.txtCodProd.ValidatingType = typeof(int);
             // 
             // btnPesquisar
@@ -113,6 +112,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dataGridView1.ForeColor = System.Drawing.Color.Black;
+            //this.dataGridView1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 187);
             this.dataGridView1.Name = "dataGridView1";
@@ -137,7 +137,7 @@
             this.txtNomeItem.Location = new System.Drawing.Point(163, 82);
             this.txtNomeItem.Name = "txtNomeItem";
             this.txtNomeItem.Size = new System.Drawing.Size(180, 23);
-            this.txtNomeItem.TabIndex = 4;
+            this.txtNomeItem.TabIndex = 2;
             // 
             // label1
             // 
@@ -158,7 +158,7 @@
             this.txtMarca.Location = new System.Drawing.Point(52, 145);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(240, 23);
-            this.txtMarca.TabIndex = 7;
+            this.txtMarca.TabIndex = 5;
             // 
             // txtPreco
             // 
@@ -167,7 +167,7 @@
             this.txtPreco.Location = new System.Drawing.Point(474, 82);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(76, 23);
-            this.txtPreco.TabIndex = 9;
+            this.txtPreco.TabIndex = 4;
             // 
             // label4
             // 
@@ -210,7 +210,7 @@
             this.cboTipo.Location = new System.Drawing.Point(323, 145);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(221, 22);
-            this.cboTipo.TabIndex = 36;
+            this.cboTipo.TabIndex = 6;
             // 
             // txtQuantidade
             // 
@@ -221,7 +221,7 @@
             this.txtQuantidade.Mask = "0000";
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(79, 23);
-            this.txtQuantidade.TabIndex = 38;
+            this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.ValidatingType = typeof(int);
             // 
             // TelaConsEstoque

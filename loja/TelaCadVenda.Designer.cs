@@ -32,31 +32,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.txtCpfCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtVendedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateCompra = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCpfVendedor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.datePagamento = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtValorTotal = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.txtDesconto = new System.Windows.Forms.MaskedTextBox();
             this.txtValorUnitario = new System.Windows.Forms.MaskedTextBox();
             this.txtCodigoBarra = new System.Windows.Forms.MaskedTextBox();
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.nudNumParcelas = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtAcrescimo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cboTipoPagamento = new System.Windows.Forms.ComboBox();
             this.txtProduto = new System.Windows.Forms.TextBox();
@@ -67,6 +59,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.txtCpfCliente = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpfVendedor = new System.Windows.Forms.MaskedTextBox();
+            this.chkParcelado = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumParcelas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuatidadeProdutos)).BeginInit();
@@ -102,15 +97,6 @@
             this.txtCliente.Size = new System.Drawing.Size(197, 23);
             this.txtCliente.TabIndex = 2;
             // 
-            // txtCpfCliente
-            // 
-            this.txtCpfCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCpfCliente.ForeColor = System.Drawing.Color.White;
-            this.txtCpfCliente.Location = new System.Drawing.Point(251, 66);
-            this.txtCpfCliente.Name = "txtCpfCliente";
-            this.txtCpfCliente.Size = new System.Drawing.Size(156, 23);
-            this.txtCpfCliente.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -145,7 +131,7 @@
             this.dateCompra.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.dateCompra.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.dateCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCompra.Location = new System.Drawing.Point(438, 63);
+            this.dateCompra.Location = new System.Drawing.Point(384, 63);
             this.dateCompra.Name = "dateCompra";
             this.dateCompra.Size = new System.Drawing.Size(100, 23);
             this.dateCompra.TabIndex = 7;
@@ -154,20 +140,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(435, 48);
+            this.label5.Location = new System.Drawing.Point(381, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Data da Compra:";
-            // 
-            // txtCpfVendedor
-            // 
-            this.txtCpfVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtCpfVendedor.ForeColor = System.Drawing.Color.White;
-            this.txtCpfVendedor.Location = new System.Drawing.Point(251, 110);
-            this.txtCpfVendedor.Name = "txtCpfVendedor";
-            this.txtCpfVendedor.Size = new System.Drawing.Size(156, 23);
-            this.txtCpfVendedor.TabIndex = 10;
             // 
             // label6
             // 
@@ -179,46 +156,21 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "CPF:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(423, 89);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 15);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Pagamento:";
-            // 
-            // datePagamento
-            // 
-            this.datePagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePagamento.Location = new System.Drawing.Point(425, 107);
-            this.datePagamento.Name = "datePagamento";
-            this.datePagamento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.datePagamento.Size = new System.Drawing.Size(80, 23);
-            this.datePagamento.TabIndex = 42;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.chkParcelado);
             this.groupBox2.Controls.Add(this.txtValorTotal);
-            this.groupBox2.Controls.Add(this.maskedTextBox1);
             this.groupBox2.Controls.Add(this.txtDesconto);
             this.groupBox2.Controls.Add(this.txtValorUnitario);
             this.groupBox2.Controls.Add(this.txtCodigoBarra);
             this.groupBox2.Controls.Add(this.txtCodigo);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.nudNumParcelas);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtAcrescimo);
-            this.groupBox2.Controls.Add(this.datePagamento);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.cboTipoPagamento);
             this.groupBox2.Controls.Add(this.txtProduto);
             this.groupBox2.Controls.Add(this.label16);
@@ -233,7 +185,6 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Pedido";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtValorTotal
             // 
@@ -244,16 +195,6 @@
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(120, 23);
             this.txtValorTotal.TabIndex = 70;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
-            this.maskedTextBox1.Location = new System.Drawing.Point(175, 165);
-            this.maskedTextBox1.Mask = "000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(124, 23);
-            this.maskedTextBox1.TabIndex = 69;
             // 
             // txtDesconto
             // 
@@ -295,41 +236,20 @@
             this.txtCodigo.Size = new System.Drawing.Size(120, 23);
             this.txtCodigo.TabIndex = 31;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(172, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 15);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Imposto:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(331, 146);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 15);
-            this.label13.TabIndex = 63;
-            this.label13.Text = "Acréscimo ao mês:";
-            // 
             // nudNumParcelas
             // 
             this.nudNumParcelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.nudNumParcelas.ForeColor = System.Drawing.Color.White;
-            this.nudNumParcelas.Location = new System.Drawing.Point(334, 107);
+            this.nudNumParcelas.Location = new System.Drawing.Point(426, 109);
             this.nudNumParcelas.Name = "nudNumParcelas";
-            this.nudNumParcelas.Size = new System.Drawing.Size(71, 23);
+            this.nudNumParcelas.Size = new System.Drawing.Size(79, 23);
             this.nudNumParcelas.TabIndex = 62;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(331, 88);
+            this.label12.Location = new System.Drawing.Point(423, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 15);
             this.label12.TabIndex = 61;
@@ -367,15 +287,6 @@
             this.label9.Size = new System.Drawing.Size(85, 15);
             this.label9.TabIndex = 53;
             this.label9.Text = "Valor Unitário:";
-            // 
-            // txtAcrescimo
-            // 
-            this.txtAcrescimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.txtAcrescimo.ForeColor = System.Drawing.Color.White;
-            this.txtAcrescimo.Location = new System.Drawing.Point(334, 165);
-            this.txtAcrescimo.Name = "txtAcrescimo";
-            this.txtAcrescimo.Size = new System.Drawing.Size(119, 23);
-            this.txtAcrescimo.TabIndex = 52;
             // 
             // label15
             // 
@@ -421,7 +332,6 @@
             this.label16.Size = new System.Drawing.Size(54, 15);
             this.label16.TabIndex = 44;
             this.label16.Text = "Produto:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -485,6 +395,37 @@
             this.vScrollBar1.Size = new System.Drawing.Size(17, 491);
             this.vScrollBar1.TabIndex = 23;
             // 
+            // txtCpfCliente
+            // 
+            this.txtCpfCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCpfCliente.ForeColor = System.Drawing.Color.White;
+            this.txtCpfCliente.Location = new System.Drawing.Point(251, 66);
+            this.txtCpfCliente.Mask = "000.000.000-00";
+            this.txtCpfCliente.Name = "txtCpfCliente";
+            this.txtCpfCliente.Size = new System.Drawing.Size(100, 23);
+            this.txtCpfCliente.TabIndex = 31;
+            // 
+            // txtCpfVendedor
+            // 
+            this.txtCpfVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtCpfVendedor.ForeColor = System.Drawing.Color.White;
+            this.txtCpfVendedor.Location = new System.Drawing.Point(251, 110);
+            this.txtCpfVendedor.Mask = "000.000.000-00";
+            this.txtCpfVendedor.Name = "txtCpfVendedor";
+            this.txtCpfVendedor.Size = new System.Drawing.Size(100, 23);
+            this.txtCpfVendedor.TabIndex = 32;
+            // 
+            // chkParcelado
+            // 
+            this.chkParcelado.AutoSize = true;
+            this.chkParcelado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkParcelado.Location = new System.Drawing.Point(327, 112);
+            this.chkParcelado.Name = "chkParcelado";
+            this.chkParcelado.Size = new System.Drawing.Size(78, 19);
+            this.chkParcelado.TabIndex = 71;
+            this.chkParcelado.Text = "Parcelado";
+            this.chkParcelado.UseVisualStyleBackColor = true;
+            // 
             // TelaCadVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -493,16 +434,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(566, 508);
+            this.Controls.Add(this.txtCpfVendedor);
+            this.Controls.Add(this.txtCpfCliente);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.txtCpfVendedor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateCompra);
             this.Controls.Add(this.txtVendedor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCpfCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label2);
@@ -526,16 +467,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.TextBox txtCpfCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtVendedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateCompra;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCpfVendedor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker datePagamento;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cboTipoPagamento;
         private System.Windows.Forms.TextBox txtProduto;
@@ -544,22 +481,21 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown nudQuatidadeProdutos;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown nudNumParcelas;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtAcrescimo;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox txtDesconto;
         private System.Windows.Forms.MaskedTextBox txtValorUnitario;
         private System.Windows.Forms.MaskedTextBox txtCodigoBarra;
         private System.Windows.Forms.MaskedTextBox txtCodigo;
         private System.Windows.Forms.MaskedTextBox txtValorTotal;
+        private System.Windows.Forms.MaskedTextBox txtCpfCliente;
+        private System.Windows.Forms.MaskedTextBox txtCpfVendedor;
+        private System.Windows.Forms.CheckBox chkParcelado;
     }
 }
