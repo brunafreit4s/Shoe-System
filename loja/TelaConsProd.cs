@@ -15,6 +15,7 @@ namespace loja
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         Boolean retorno = false;
+        Boolean consultarPorCod = false;
 
         public TelaConsProd()
         {
@@ -26,7 +27,14 @@ namespace loja
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select a.*, b.nomeTipo, c.fk_codProd from Produto a, TipoProduto b, Estoque c where a.codTipo = b.codTipo and a.codProd='" + txtCodProd.Text + "' and c.fk_codProd ='" + txtCodProd.Text + "' ";
+            if (consultarPorCod == true)
+            {
+                cmd.CommandText = "Select a.*, b.nomeTipo, c.fk_codProd from Produto a, TipoProduto b, Estoque c where a.codTipo = b.codTipo and a.codProd='" + txtCodProd.Text + "' and c.fk_codProd = a.codProd ";
+            }
+            else
+            {
+                cmd.CommandText = "Select a.*, b.nomeTipo, c.fk_codProd from Produto a, TipoProduto b, Estoque c where a.codTipo = b.codTipo and a.codigoBarras='" + txtCodigoBarra.Text + "' and c.fk_codProd = a.codProd ";
+            }
             MySqlDataReader rdr = cmd.ExecuteReader();
 
             if (rdr.Read())
@@ -77,14 +85,11 @@ namespace loja
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txtCodProd.Text == "")
-            {
-                MessageBox.Show("É nescessário um Código, ou Nome, ou Código de Barras!");
-            }
-            else
+            if (txtCodProd.Text != "")
             {
                 try
                 {
+                    consultarPorCod = true;
                     ConsultaBanco();
 
                     if (retorno == false)
@@ -103,41 +108,68 @@ namespace loja
                     MessageBox.Show(ex.ToString());
                 }
             }
+            else if (txtCodigoBarra.Text != "")
+            {
+                try
+                {
+                    consultarPorCod = false;
+                    ConsultaBanco();
+
+                    if (retorno == false)
+                    {
+                        MessageBox.Show("Não foi possível encontrar os valores digitados!");
+                    }
+                    else
+                    {
+                        btnAlterar.Enabled = true;
+                        btnExcluir.Enabled = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    con.Close();
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("É nescessário um Código do Produto ou um Código de Barras!");
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtCodProd.Text == "")
+                if (txtCodProd.Text != "")
                 {
-                    MessageBox.Show("É nescessário digitar o Código do Produto");
-                }
-                else if (Convert.ToInt32(txtQuantidade.Text) >= 0)
-                {
-                    con.Open();
-                    int codCombo = cboTipo.SelectedIndex + 1;
-                    string sql = "update Produto set nomeProd = '" + txtNomeProduto.Text + "', quantidadeProd = '" + txtQuantidade.Text + "', dataCadProd = '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', precoProd = '" + txtPreco.Text + "', custoProd = '" + txtCusto.Text + "', marcaProd = '" + txtMarca.Text + "', dataCompraProd = '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', nomeFornecedor = '" + txtFornecedor.Text + "', codTipo = '" + codCombo + "', estoque = '" + txtEstoque.Text + "', descricaoProd = '" + txtDescricao.Text + "', codigoBarras = '" + txtCodigoBarra.Text + "' where codProd ='" + txtCodProd.Text + "'";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Produto Alterado.");
-                    con.Close();
-                    limparTela();
-                }
-                else
-                {
-                    if (MessageBox.Show("A quantidade de Produto é igual a 0. Deseja Excluir o Produto do Estoque?", "Confirmação",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Convert.ToInt32(txtQuantidade.Text) > 0)
                     {
-                        //tem que executar o Delte na tabela de Estoque 
-                        this.Close();
+                        alterarProd();
+                        alterarProdEstoque();
+                        limparTela();
+                        MessageBox.Show("Produto Alterado.");
                     }
                     else
                     {
-                        MessageBox.Show("Atenção! O Produto não foi Deletado do Estoque e não pode ser Alterado com o valor da quantidade igual a 0!");
+                        if (MessageBox.Show("A quantidade de Produto é igual a 0. Deseja Excluir o Produto? Também Será Excluído do Estoque!", "Atenção!",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            excluirProdEstoque();
+                            excluirProd();                 
+                            limparTela();
+                            MessageBox.Show("Produto Excluído.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("O Produto não foi Deletado do Estoque e não pode ser Alterado com o valor da quantidade igual a 0!", "Atenção!");
+                        }
                     }
                 }
-
+                else
+                {
+                    MessageBox.Show("É nescessário Consultar um Produto para efetuar a Alteração");
+                }
             }
             catch (Exception ex)
             {
@@ -150,20 +182,16 @@ namespace loja
         {
             if (txtCodProd.Text == "")
             {
-                MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão");
+                MessageBox.Show("É necessário consultar um Produto para efetuar a Exclusão");
             }
             else
             {
                 try
                 {
-                    con.Open();
-                    string sql = "delete from Produto where codProd ='" + txtCodProd.Text + "'";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Produto Excluído.");
-                    con.Close();
+                    excluirProdEstoque();
+                    excluirProd();                    
                     limparTela();
+                    MessageBox.Show("Produto Excluído.");
                 }
                 catch (Exception ex)
                 {
@@ -189,5 +217,39 @@ namespace loja
             txtDescricao.Text = "";
             txtCodigoBarra.Text = "";
         }
+
+        public void alterarProdEstoque() {
+            con.Open();
+            int codCombo = cboTipo.SelectedIndex + 1;
+            string sql = "update Estoque set nomeProdEstoq = '" + txtNomeProduto.Text + "', quantidadeProdEstoq = '" + txtQuantidade.Text + "', precoProdEstoq = '" + txtPreco.Text + "', marcaProdEstoq = '" + txtMarca.Text + "', codTipoProdEstoq = '" + codCombo + "' where fk_codProd = '" + txtCodProd.Text + "'";            
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();            
+            con.Close();
+        }
+
+        public void alterarProd() {
+            con.Open();
+            int codCombo = cboTipo.SelectedIndex + 1;
+            string sql = "update Produto set nomeProd = '" + txtNomeProduto.Text + "', quantidadeProd = '" + txtQuantidade.Text + "', dataCadProd = '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', precoProd = '" + txtPreco.Text + "', custoProd = '" + txtCusto.Text + "', marcaProd = '" + txtMarca.Text + "', dataCompraProd = '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', nomeFornecedor = '" + txtFornecedor.Text + "', codTipo = '" + codCombo + "', descricaoProd = '" + txtDescricao.Text + "', codigoBarras = '" + txtCodigoBarra.Text + "' where codProd ='" + txtCodProd.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void excluirProdEstoque() {
+            con.Open();
+            string sql = "delete from Estoque where fk_codProd = '" + txtCodProd.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();            
+            con.Close();
+        }
+
+        public void excluirProd() {
+            con.Open();
+            string sql = "delete from Produto where codProd ='" + txtCodProd.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();            
+        }        
     }
 }

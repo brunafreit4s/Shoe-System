@@ -42,9 +42,9 @@ namespace loja
                     MessageBox.Show("É necessário selecionar um Tipo de Produto");
                 }
                 else
-                {
-                    incluirProdEstoque();
+                {                    
                     incluirProd();
+                    incluirProdEstoque();
                     limparTela();
                 }
             }
@@ -59,9 +59,13 @@ namespace loja
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select codProd from Produto";
+            cmd.CommandText = "Select codProd from Produto where codigoBarras = '" + txtCodigoBarra.Text + "' ";
             MySqlDataReader rdr = cmd.ExecuteReader();
-            codProd = rdr.FieldCount;
+
+            if (rdr.Read())
+            {
+                codProd = Convert.ToInt32(rdr[0].ToString());
+            }
             con.Close();
         }
 
