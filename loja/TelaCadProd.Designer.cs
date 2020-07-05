@@ -247,7 +247,7 @@
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Font = new System.Drawing.Font("Corbel", 12.25F, System.Drawing.FontStyle.Bold);
             this.btnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.btnCadastrar.Location = new System.Drawing.Point(230, 278);
+            this.btnCadastrar.Location = new System.Drawing.Point(230, 283);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 35);
             this.btnCadastrar.TabIndex = 14;
@@ -312,7 +312,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 328);
+            this.ClientSize = new System.Drawing.Size(584, 340);
             this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtCodigoBarra);

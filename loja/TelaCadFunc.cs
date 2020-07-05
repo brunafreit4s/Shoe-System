@@ -41,15 +41,15 @@ namespace loja
             {
                 if (txtNome.Text == "")
                 {
-                    MessageBox.Show("É necessário digitar um Nome");
+                    MessageBox.Show("É necessário digitar um Nome", "Atenção");
                 }
                 else if (txtCpf.Text == "")
                 {
-                    MessageBox.Show("É necessário digitar um CPF");
+                    MessageBox.Show("É necessário digitar um CPF", "Atenção");
                 }
                 else if (txtLogin.Text == "")
                 {
-                    MessageBox.Show("É necessário digitar um login de acesso ao Sistema");
+                    MessageBox.Show("É necessário digitar um login de acesso ao Sistema", "Atenção");
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace loja
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Funcionário Cadastrado.");
+                    MessageBox.Show("Funcionário Cadastrado.", "Atenção");
                     txtBairro.Text = "";
                     txtCelular.Text = "";
                     txtCep.Text = "";

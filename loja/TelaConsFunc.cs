@@ -84,7 +84,7 @@ namespace loja
 
                     if (retorno == false)
                     {
-                        MessageBox.Show("Não foi possível encontrar os valores digitados!");
+                        MessageBox.Show("Não foi possível encontrar os valores digitados!", "Atenção");
                     }
                     else
                     {
@@ -100,7 +100,7 @@ namespace loja
             }
             else
             {
-                MessageBox.Show("É nescessário uma Matrícula, ou Nome, ou CPF do Funcionário!");
+                MessageBox.Show("É nescessário uma Matrícula, ou Nome, ou CPF do Funcionário!", "Atenção");
             }
         }
 
@@ -115,15 +115,15 @@ namespace loja
             {
                 if (txtNome.Text == "")
                 {
-                    MessageBox.Show("É nescessário digitar um Nome");
+                    MessageBox.Show("É nescessário digitar um Nome", "Atenção");
                 }
                 else if (txtCpf.Text == "")
                 {
-                    MessageBox.Show("É nescessário digitar um CPF");
+                    MessageBox.Show("É nescessário digitar um CPF", "Atenção");
                 }
                 else if (txtLogin.Text == "")
                 {
-                    MessageBox.Show("É nescessário digitar um login de acesso ao Sistema");
+                    MessageBox.Show("É nescessário digitar um login de acesso ao Sistema", "Atenção");
                 }
                 else
                 {
@@ -142,7 +142,7 @@ namespace loja
                     string sql = "update funcionario set nomeCargo = '" + comboCargo.Text + "', nomeFunc = '" + txtNome.Text + "', cpf = '" + txtCpf.Text + "', RG = '" + txtRg.Text + "', endereco = '" + txtEndereco.Text + "', dataNascimento = '" + Convert.ToDateTime(txtDataNasc.Text).ToString("yyyy/MM/dd") + "', codRestricao = '" + tl.txtCodRestric.Text + "', telefone = '" + txtTelefone.Text + "', celular = '" + txtCelular.Text + "', numeroEndereco = '" + txtNumEndereco.Text + "', cidade = '" + txtCidade.Text + "', UF = '" + txtUf.Text + "', email = '" + txtEmail.Text + "', bairro = '" + txtBairro.Text + "', CEP = '" + txtCep.Text + "', login = '" + txtLogin.Text + "', senha = '" + txtSenha.Text + "' where codFuncionario ='" + txtMatricula.Text + "'";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Funcionário Alterado.");                    
+                    MessageBox.Show("Funcionário Alterado.", "Atenção");
                     con.Close();
                     limparTela();
                 }
@@ -165,13 +165,13 @@ namespace loja
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Funcionário Excluído.");                 
+                    MessageBox.Show("Funcionário Excluído.", "Atenção");
                     con.Close();
                     limparTela();
                 }
                 else
                 {
-                    MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão");
+                    MessageBox.Show("É necessário consultar uma matrícula para efetuar a Exclusão", "Atenção");
                 }
             }
             catch (Exception ex)

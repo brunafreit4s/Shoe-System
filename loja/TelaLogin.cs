@@ -20,6 +20,7 @@ namespace loja
         Boolean retorno = false;
         TelaPrincipal Form = new TelaPrincipal();
         TelaConsFunc FormConsFunc = new TelaConsFunc();
+        TelaCadVenda FormCadVenda = new TelaCadVenda();
 
         public TelaLogin()
         {
@@ -54,7 +55,7 @@ namespace loja
 
 
         public void ConexaoBanco()
-        {
+        {            
             int i = 0;
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
@@ -97,10 +98,10 @@ namespace loja
             Form = new TelaPrincipal();
             if (txtLogin.Text == "")
             {
-                MessageBox.Show("Digite um Login");
+                MessageBox.Show("Digite um Login", "Atenção");
             }
             else if(txtSenha.Text == "") {
-                MessageBox.Show("Digite uma Senha");
+                MessageBox.Show("Digite uma Senha", "Atenção");
             }
             else {
                 try
@@ -115,7 +116,7 @@ namespace loja
                     }
                     else
                     {
-                        MessageBox.Show("Verifique Login e Senha digitado");
+                        MessageBox.Show("Verifique Login e Senha digitado", "Atenção");
                     }
                 }
                 catch (Exception ex)

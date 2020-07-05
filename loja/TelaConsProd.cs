@@ -94,7 +94,7 @@ namespace loja
 
                     if (retorno == false)
                     {
-                        MessageBox.Show("Não foi possível encontrar os valores digitados!");
+                        MessageBox.Show("Não foi possível encontrar os valores digitados!", "Atenção");
                     }
                     else
                     {
@@ -117,7 +117,7 @@ namespace loja
 
                     if (retorno == false)
                     {
-                        MessageBox.Show("Não foi possível encontrar os valores digitados!");
+                        MessageBox.Show("Não foi possível encontrar os valores digitados!", "Atenção");
                     }
                     else
                     {
@@ -133,7 +133,7 @@ namespace loja
             }
             else
             {
-                MessageBox.Show("É nescessário um Código do Produto ou um Código de Barras!");
+                MessageBox.Show("É nescessário um Código do Produto ou um Código de Barras!", "Atenção");
             }
         }
 
@@ -158,7 +158,7 @@ namespace loja
                             excluirProdEstoque();
                             excluirProd();                 
                             limparTela();
-                            MessageBox.Show("Produto Excluído.");
+                            MessageBox.Show("Produto Excluído.", "Atenção");
                         }
                         else
                         {
@@ -168,7 +168,7 @@ namespace loja
                 }
                 else
                 {
-                    MessageBox.Show("É nescessário Consultar um Produto para efetuar a Alteração");
+                    MessageBox.Show("É nescessário Consultar um Produto para efetuar a Alteração", "Atenção");
                 }
             }
             catch (Exception ex)
@@ -182,7 +182,7 @@ namespace loja
         {
             if (txtCodProd.Text == "")
             {
-                MessageBox.Show("É necessário consultar um Produto para efetuar a Exclusão");
+                MessageBox.Show("É necessário consultar um Produto para efetuar a Exclusão", "Atenção");
             }
             else
             {
@@ -191,7 +191,7 @@ namespace loja
                     excluirProdEstoque();
                     excluirProd();                    
                     limparTela();
-                    MessageBox.Show("Produto Excluído.");
+                    MessageBox.Show("Produto Excluído.", "Atenção");
                 }
                 catch (Exception ex)
                 {

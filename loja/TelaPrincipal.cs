@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace loja
 {
     public partial class TelaPrincipal : Form
     {
+        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         public TelaPrincipal()
         {
             InitializeComponent();
@@ -57,6 +59,19 @@ namespace loja
             TelaCadVenda Form = new TelaCadVenda();
             Form.Show();
             Visible = true;
+
+            con.Open();
+            MySqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select nomeFunc, cpf from Funcionario where cpf = '" + txtCpf.Text + "'";
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                Form.txtVendedor.Text = rdr[0].ToString();
+                Form.txtCpfVendedor.Text = rdr[1].ToString();
+            }
+            con.Close();
         }
 
         private void consultarToolStripMenuItem4_Click(object sender, EventArgs e)

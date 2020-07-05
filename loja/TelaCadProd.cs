@@ -27,19 +27,19 @@ namespace loja
             {
                 if (txtNomeProduto.Text == "")
                 {
-                    MessageBox.Show("É necessário digitar Nome do Produto");                    
+                    MessageBox.Show("É necessário digitar Nome do Produto", "Atenção");
                 }
                 else if (txtPreco.Text == "   ,")
                 {
-                    MessageBox.Show("É necessário digitar um Preço");
+                    MessageBox.Show("É necessário digitar um Preço", "Atenção");
                 }
                 else if (txtCusto.Text == "   ,")
                 {
-                    MessageBox.Show("É necessário digitar o Custo");
+                    MessageBox.Show("É necessário digitar o Custo", "Atenção");
                 }
                 else if (cboTipo.SelectedIndex == 0)
                 {
-                    MessageBox.Show("É necessário selecionar um Tipo de Produto");
+                    MessageBox.Show("É necessário selecionar um Tipo de Produto", "Atenção");
                 }
                 else
                 {                    
@@ -87,7 +87,7 @@ namespace loja
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Produto Cadastrado.");            
+            MessageBox.Show("Produto Cadastrado.", "Atenção");
             con.Close();
         }
 
@@ -108,7 +108,7 @@ namespace loja
 
         private void TelaCadProd_Load(object sender, EventArgs e)
         {
-            //Preenche o ComboBox com os cadastros da Tabela - Tipo
+            //Preenche o ComboBox com os cadastros da Tabela - Tipo de Produto
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
