@@ -74,30 +74,23 @@ namespace loja
             dt.Load(rdr);
             con.Close();
             return dt;
-        }       
+        }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txtCpfCliente.Text != "" && txtCpfVendedor.Text != "")
+            if (txtCpfCliente.Text != "   ,   ,   -")
             {
-                MessageBox.Show("Digite Apena um CPF para Pesquisa", "Atenção");
+                dataGridView1.DataSource = listaCliente();
+                txtCpfCliente.Text = "";
+            }
+            else if (txtCpfVendedor.Text != "   ,   ,   -")
+            {
+                dataGridView1.DataSource = listaVendedor();
+                txtCpfVendedor.Text = "";
             }
             else
             {
-                if (txtCpfCliente.Text != "")
-                {
-                    dataGridView1.DataSource = listaCliente();
-                    txtCpfCliente.Text = "";
-                }
-                else if (txtCpfVendedor.Text != "")
-                {
-                    dataGridView1.DataSource = listaVendedor();
-                    txtCpfVendedor.Text = "";
-                }
-                else
-                {
-                    dataGridView1.DataSource = lista();
-                }
+                dataGridView1.DataSource = lista();
             }
         }
 

@@ -37,10 +37,6 @@ namespace loja
                 {
                     MessageBox.Show("É necessário digitar o Custo", "Atenção");
                 }
-                else if (cboTipo.SelectedIndex == 0)
-                {
-                    MessageBox.Show("É necessário selecionar um Tipo de Produto", "Atenção");
-                }
                 else
                 {                    
                     incluirProd();

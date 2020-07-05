@@ -107,7 +107,7 @@ namespace loja
             }
         }
 
-        private void txtValorUnitario_MouseHover(object sender, EventArgs e)
+        private void txtDesconto_MouseHover(object sender, EventArgs e)
         {
             if (txtValorUnitario.Text != "   ,")
             {

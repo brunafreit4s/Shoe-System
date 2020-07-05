@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsVenda));
             this.label20 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtCpfVendedor = new System.Windows.Forms.MaskedTextBox();
@@ -53,13 +52,6 @@
             this.label20.Size = new System.Drawing.Size(185, 27);
             this.label20.TabIndex = 33;
             this.label20.Text = "Consulta de Venda";
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(564, -3);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(16, 501);
-            this.vScrollBar1.TabIndex = 47;
             // 
             // btnLimpar
             // 
@@ -156,7 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(580, 521);
+            this.ClientSize = new System.Drawing.Size(573, 525);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCpfVendedor);
@@ -165,7 +157,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.label20);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsVenda";
@@ -179,7 +170,6 @@
 
         #endregion
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.MaskedTextBox txtCpfVendedor;

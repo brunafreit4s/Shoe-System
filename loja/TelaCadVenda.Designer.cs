@@ -211,6 +211,7 @@
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(124, 23);
             this.txtDesconto.TabIndex = 75;
+            this.txtDesconto.MouseHover += new System.EventHandler(this.txtDesconto_MouseHover);
             // 
             // txtValorParcela
             // 
@@ -231,8 +232,7 @@
             this.txtValorUnitario.Mask = "000.00";
             this.txtValorUnitario.Name = "txtValorUnitario";
             this.txtValorUnitario.Size = new System.Drawing.Size(120, 23);
-            this.txtValorUnitario.TabIndex = 73;
-            this.txtValorUnitario.MouseHover += new System.EventHandler(this.txtValorUnitario_MouseHover);
+            this.txtValorUnitario.TabIndex = 73;            
             // 
             // label7
             // 
