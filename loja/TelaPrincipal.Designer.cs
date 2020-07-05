@@ -75,6 +75,7 @@
             this.funcioarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadFunc,
             this.menuConsFunc});
+            this.funcioarioToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.funcioarioToolStripMenuItem.Name = "funcioarioToolStripMenuItem";
             this.funcioarioToolStripMenuItem.Size = new System.Drawing.Size(86, 21);
             this.funcioarioToolStripMenuItem.Text = "Funcionário";
@@ -102,6 +103,7 @@
             this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadProd,
             this.menuConsProd});
+            this.produtoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
             this.produtoToolStripMenuItem.Text = "Produto";
@@ -128,6 +130,7 @@
             // 
             this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuConsEstoque});
+            this.estoqueToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
             this.estoqueToolStripMenuItem.Text = "Estoque";
@@ -146,6 +149,7 @@
             this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadVenda,
             this.menuConsVenda});
+            this.vendaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(57, 21);
             this.vendaToolStripMenuItem.Text = "Venda";
@@ -155,7 +159,7 @@
             this.menuCadVenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuCadVenda.ForeColor = System.Drawing.Color.White;
             this.menuCadVenda.Name = "menuCadVenda";
-            this.menuCadVenda.Size = new System.Drawing.Size(131, 22);
+            this.menuCadVenda.Size = new System.Drawing.Size(152, 22);
             this.menuCadVenda.Text = "Incluir";
             this.menuCadVenda.Click += new System.EventHandler(this.consultarToolStripMenuItem3_Click);
             // 
@@ -164,7 +168,7 @@
             this.menuConsVenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuConsVenda.ForeColor = System.Drawing.Color.White;
             this.menuConsVenda.Name = "menuConsVenda";
-            this.menuConsVenda.Size = new System.Drawing.Size(131, 22);
+            this.menuConsVenda.Size = new System.Drawing.Size(152, 22);
             this.menuConsVenda.Text = "Consultar";
             this.menuConsVenda.Click += new System.EventHandler(this.consultarToolStripMenuItem4_Click);
             // 
@@ -174,12 +178,15 @@
             this.produtoToolStripMenuItem1,
             this.estoqueToolStripMenuItem1,
             this.vendaToolStripMenuItem1});
+            this.relatóriosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // produtoToolStripMenuItem1
             // 
+            this.produtoToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.produtoToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
             this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.produtoToolStripMenuItem1.Text = "Produto";
@@ -187,6 +194,8 @@
             // 
             // estoqueToolStripMenuItem1
             // 
+            this.estoqueToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.estoqueToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.estoqueToolStripMenuItem1.Name = "estoqueToolStripMenuItem1";
             this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.estoqueToolStripMenuItem1.Text = "Estoque";
@@ -194,6 +203,8 @@
             // 
             // vendaToolStripMenuItem1
             // 
+            this.vendaToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.vendaToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.vendaToolStripMenuItem1.Name = "vendaToolStripMenuItem1";
             this.vendaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.vendaToolStripMenuItem1.Text = "Venda";

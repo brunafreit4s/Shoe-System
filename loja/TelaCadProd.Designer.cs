@@ -88,6 +88,7 @@
             this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
             this.txtNomeProduto.Location = new System.Drawing.Point(15, 71);
+            this.txtNomeProduto.MaxLength = 40;
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(233, 23);
             this.txtNomeProduto.TabIndex = 1;
@@ -127,6 +128,7 @@
             this.txtDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtDescricao.ForeColor = System.Drawing.Color.White;
             this.txtDescricao.Location = new System.Drawing.Point(15, 233);
+            this.txtDescricao.MaxLength = 40;
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(233, 23);
@@ -157,6 +159,7 @@
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtMarca.ForeColor = System.Drawing.Color.White;
             this.txtMarca.Location = new System.Drawing.Point(273, 125);
+            this.txtMarca.MaxLength = 40;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(174, 23);
             this.txtMarca.TabIndex = 6;
@@ -197,6 +200,7 @@
             this.txtFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.txtFornecedor.ForeColor = System.Drawing.Color.White;
             this.txtFornecedor.Location = new System.Drawing.Point(15, 178);
+            this.txtFornecedor.MaxLength = 40;
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(233, 23);
             this.txtFornecedor.TabIndex = 8;

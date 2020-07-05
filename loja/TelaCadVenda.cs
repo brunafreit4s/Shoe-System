@@ -15,6 +15,7 @@ namespace loja
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         int totalAtual = 0; //Quantidade Atual no Estoque
+        int quantidade = 0;
 
         public TelaCadVenda()
         {
@@ -28,11 +29,12 @@ namespace loja
                 txtParcelas.Enabled = true;
                 txtValorParcela.Enabled = true;
             }
-            else {
+            else
+            {
                 txtParcelas.Enabled = false;
                 txtValorParcela.Enabled = false;
             }
-        }        
+        }
 
         private void TelaCadVenda_Load(object sender, EventArgs e)
         {
@@ -56,7 +58,7 @@ namespace loja
                 con.Open();
                 MySqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select codProd, nomeProd, codigoBarras, precoProd from Produto where codProd='" + txtCodigo.Text + "'";
+                cmd.CommandText = "select codProd, nomeProd, codigoBarras, precoProd, quantidadeProd from Produto where codProd='" + txtCodigo.Text + "'";
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 if (rdr.Read())
@@ -65,6 +67,7 @@ namespace loja
                     txtProduto.Text = rdr[1].ToString();
                     txtCodigoBarra.Text = rdr[2].ToString();
                     txtValorUnitario.Text = rdr[3].ToString();
+                    quantidade = Convert.ToInt32(rdr[4].ToString());
                 }
                 else
                 {
@@ -72,7 +75,8 @@ namespace loja
                 }
                 con.Close();
             }
-            else if (txtCodigoBarra.Text != "") {
+            else if (txtCodigoBarra.Text != "")
+            {
                 con.Open();
                 MySqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -92,10 +96,11 @@ namespace loja
                 }
                 con.Close();
             }
-            else {
+            else
+            {
                 MessageBox.Show("Por favor digite um Código ou Código de Barras de um Produto Cadastrado.", "Atenção");
-            }           
-            
+            }
+
         }
 
         private void txtParcelas_ValueChanged(object sender, EventArgs e)
@@ -128,7 +133,8 @@ namespace loja
         {
             if (txtValorUnitario.Text != "   ,")
             {
-                if (txtDesconto.Text == "   ,") {
+                if (txtDesconto.Text == "   ,")
+                {
                     txtDesconto.Text = "000,00";
                 }
                 double dbValorUni = Convert.ToDouble(txtValorUnitario.Text);
@@ -146,29 +152,82 @@ namespace loja
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
-        {   try
+        {
+            try
             {
-                if(txtCliente.Text == "") {
+                if (txtCliente.Text == "")
+                {
                     MessageBox.Show("Digite o Nome do Cliente", "Atenção");
                 }
-                else if (txtCpfCliente.Text == "") {
+                else if (txtCpfCliente.Text == "   .   .   -  ")
+                {
                     MessageBox.Show("É necessário o CPF do Cliente", "Atenção");
                 }
-                else if (txtCodigo.Text == "") {
+                else if (txtCpfCliente.Text == "000.000.000-00")
+                {
+                    MessageBox.Show("O CPF do Cliente deve ser Válido", "Atenção");
+                }
+                else if (txtCpfVendedor.Text == "   .   .   -  ")
+                {
+                    MessageBox.Show("É necessário o CPF do Vendedor", "Atenção");
+                }
+                else if (txtCpfVendedor.Text == "000.000.000-00")
+                {
+                    MessageBox.Show("O CPF do Vendedor deve ser Válido", "Atenção");
+                }
+                else if (txtCodigo.Text == "")
+                {
                     MessageBox.Show("É necessário um Produto", "Atenção");
                 }
-                else if (txtCodigoBarra.Text == "") {
+                else if (txtCodigoBarra.Text == "")
+                {
                     MessageBox.Show("É necessário um Produto", "Atenção");
                 }
-                incluirVenda();
-                retiraEstoque();
+                else if (Convert.ToInt32(txtQuantidade.Text) > quantidade)
+                {
+                    MessageBox.Show("A Quantidade de produtos é maior do que a cadastrada no Estoque", "Atenção");
+                }
+                else if (txtValorUnitario.Text == "000.00")
+                {
+                    MessageBox.Show("O Valor Unitário não pode ser 0", "Atenção");
+                }
+                else if (txtValorUnitario.Text == "   .  ")
+                {
+                    MessageBox.Show("É necessário digitar um Valor Unitário", "Atenção");
+                }
+                else if (chkParcelado.Checked == true)
+                {
+                    if (txtValorParcela.Text == "   .  ")
+                    {
+                        MessageBox.Show("É necessário digitar Valor da Parcela", "Atenção");
+                    }
+                    else if (txtValorParcela.Text == "000.00")
+                    {
+                        MessageBox.Show("O Valor da Parcela não pode ser 0", "Atenção");
+                    }
+                    else if (txtParcelas.Text == "0")
+                    {
+                        MessageBox.Show("A Quantidade de Parcelas não pode ser 0", "Atenção");
+                    }
+                }
+                else if (txtValorTotal.Text == "   .  ")
+                {
+                    //Não efetua o cadastro até atualizar o textBox com o Valor total
+                }
+                else
+                {
+                    incluirVenda();
+                    retiraEstoque();
+                }
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
         }
 
-        public void incluirVenda() {
+        public void incluirVenda()
+        {
             con.Open();
             string sql = "insert into Venda(nomeCliente, cpfCliente, dataCompra, nomeFuncionario, cpfFuncionario, codProd, nomeProd, quantidade, codBarras, tipoPagamento, numParcelas, valorParcela, valorUnitario,desconto, total) values('" + txtCliente.Text + "', '" + txtCpfCliente.Text + "', '" + Convert.ToDateTime(txtDataCompra.Text).ToString("yyyy/MM/dd") + "', '" + txtVendedor.Text + "', '" + txtCpfVendedor.Text + "', '" + txtCodigo.Text + "', '" + txtProduto.Text + "', '" + txtQuantidade.Text + "', '" + txtCodigoBarra.Text + "', '" + cboTipoPagamento.Text + "', '" + txtParcelas.Text + "', '" + txtValorParcela.Text + "', '" + txtValorUnitario.Text + "', '" + txtDesconto.Text + "', '" + txtValorTotal.Text + "')";
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -177,7 +236,8 @@ namespace loja
             con.Close();
         }
 
-        public void retiraEstoque() {
+        public void retiraEstoque()
+        {
             totalAtual = 0;
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -197,7 +257,8 @@ namespace loja
             atualizarEstoque();
         }
 
-        public void atualizarEstoque() {
+        public void atualizarEstoque()
+        {
             con.Open();
             string sql = "update Estoque set quantidadeProdEstoq = '" + totalAtual + "' where fk_codProd = '" + txtCodigo.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);

@@ -71,6 +71,7 @@
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtNome.ForeColor = System.Drawing.Color.White;
             this.txtNome.Location = new System.Drawing.Point(83, 60);
+            this.txtNome.MaxLength = 40;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(252, 20);
             this.txtNome.TabIndex = 1;
@@ -81,6 +82,7 @@
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtBairro.ForeColor = System.Drawing.Color.White;
             this.txtBairro.Location = new System.Drawing.Point(83, 225);
+            this.txtBairro.MaxLength = 40;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(100, 20);
             this.txtBairro.TabIndex = 11;
@@ -91,6 +93,7 @@
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtCidade.ForeColor = System.Drawing.Color.White;
             this.txtCidade.Location = new System.Drawing.Point(235, 225);
+            this.txtCidade.MaxLength = 40;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(100, 20);
             this.txtCidade.TabIndex = 12;
@@ -233,6 +236,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(398, 101);
+            this.txtEmail.MaxLength = 40;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(166, 20);
             this.txtEmail.TabIndex = 5;
@@ -267,6 +271,7 @@
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtEndereco.ForeColor = System.Drawing.Color.White;
             this.txtEndereco.Location = new System.Drawing.Point(83, 181);
+            this.txtEndereco.MaxLength = 40;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(252, 20);
             this.txtEndereco.TabIndex = 8;
@@ -324,6 +329,7 @@
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtLogin.ForeColor = System.Drawing.Color.White;
             this.txtLogin.Location = new System.Drawing.Point(125, 287);
+            this.txtLogin.MaxLength = 40;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(150, 20);
             this.txtLogin.TabIndex = 14;
@@ -346,6 +352,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSenha.ForeColor = System.Drawing.Color.White;
             this.txtSenha.Location = new System.Drawing.Point(125, 320);
+            this.txtSenha.MaxLength = 40;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(150, 20);

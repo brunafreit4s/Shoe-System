@@ -29,14 +29,36 @@ namespace loja
                 {
                     MessageBox.Show("É necessário digitar Nome do Produto", "Atenção");
                 }
+                else if (txtQuantidade.Text == "0") {
+                    MessageBox.Show("A Quantidade deve ser maior que 0", "Atenção");
+                }
                 else if (txtPreco.Text == "   ,")
                 {
                     MessageBox.Show("É necessário digitar um Preço", "Atenção");
+                }
+                else if (txtPreco.Text == "000,00") {
+                    MessageBox.Show("É necessário digitar um Preço Válido", "Atenção");
                 }
                 else if (txtCusto.Text == "   ,")
                 {
                     MessageBox.Show("É necessário digitar o Custo", "Atenção");
                 }
+                else if (txtCusto.Text == "000,00")
+                {
+                    MessageBox.Show("É necessário digitar um Custo Válido", "Atenção");
+                }
+                else if (txtMarca.Text == "") {
+                    MessageBox.Show("É necessário digitar uma Marca", "Atenção");
+                }
+                else if (txtFornecedor.Text == "") {
+                    MessageBox.Show("É necessário digitar o Nome do Fornecedor", "Atenção");
+                }
+                else if (txtCodigoBarra.Text == "") {
+                    MessageBox.Show("É necessário digitar um Código de Barras", "Atenção");
+                }
+                else if (txtCodigoBarra.Text == "0000000") {
+                    MessageBox.Show("É necessário digitar um Código de Barras Válido", "Atenção");
+                }                
                 else
                 {                    
                     incluirProd();

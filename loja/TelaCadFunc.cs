@@ -43,13 +43,52 @@ namespace loja
                 {
                     MessageBox.Show("É necessário digitar um Nome", "Atenção");
                 }
-                else if (txtCpf.Text == "")
+                else if (txtRg.Text == "  ,   ,   -") {
+                    MessageBox.Show("É necessário digitar um RG", "Atenção");
+                }
+                else if (txtRg.Text == "00,000,000-0") {
+                    MessageBox.Show("É necessário digitar um RG Válido", "Atenção");
+                }
+                else if (txtCpf.Text == "   ,   ,   -")
                 {
                     MessageBox.Show("É necessário digitar um CPF", "Atenção");
                 }
+                else if (txtCpf.Text == "000,000,000-0") {
+                    MessageBox.Show("É necessário digitar um CPF Válido", "Atenção");
+                }
+                else if (txtTelefone.Text == "(  )    -    ") {
+                    MessageBox.Show("É necessário digitar um Telefone", "Atenção");
+                }
+                else if (txtTelefone.Text == "(00)0000-0000")
+                {
+                    MessageBox.Show("É necessário digitar um Telefone Válido", "Atenção");
+                }
+                else if (txtCelular.Text == "(  )     -    ")
+                {
+                    MessageBox.Show("É necessário digitar um Celular", "Atenção");
+                }
+                else if (txtCelular.Text == "(00)00000-0000") {
+                    MessageBox.Show("É necessário digitar um Celular Válido", "Atenção");
+                }
+                else if (txtNumEndereco.Text == "") {
+                    MessageBox.Show("É necessário digitar um Número de Endereço", "Atenção");
+                }
+                else if (txtNumEndereco.Text == "0000") {
+                    MessageBox.Show("É necessário digitar um Número de Endereço Válido", "Atenção");
+                }
+                else if(txtCep.Text == "  .   -   ") {
+                    MessageBox.Show("É necessário digitar um Cep", "Atenção");
+                }
+                else if (txtCep.Text == "00.000-000")
+                {
+                    MessageBox.Show("É necessário digitar um Cep Válido", "Atenção");
+                }
                 else if (txtLogin.Text == "")
                 {
-                    MessageBox.Show("É necessário digitar um login de acesso ao Sistema", "Atenção");
+                    MessageBox.Show("É necessário digitar um Login de acesso ao Sistema", "Atenção");
+                }
+                else if(txtSenha.Text == "") {
+                    MessageBox.Show("É necessário digitar um Senha de acesso ao Sistema", "Atenção");
                 }
                 else
                 {

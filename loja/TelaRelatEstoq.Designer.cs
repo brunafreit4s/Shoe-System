@@ -29,7 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatEstoq));
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReport11 = new loja.CrystalReport1();
             this.SuspendLayout();
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.CrystalReport11;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(531, 490);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
             // TelaRelatEstoq
             // 
@@ -37,6 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::loja.Properties.Resources.TelaEstoque;
             this.ClientSize = new System.Drawing.Size(531, 490);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaRelatEstoq";
             this.Text = "Relatório do Estoque";
@@ -45,5 +60,8 @@
         }
 
         #endregion
+
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalReport1 CrystalReport11;
     }
 }

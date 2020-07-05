@@ -227,12 +227,13 @@
             // txtValorUnitario
             // 
             this.txtValorUnitario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.txtValorUnitario.Enabled = false;
             this.txtValorUnitario.ForeColor = System.Drawing.Color.White;
             this.txtValorUnitario.Location = new System.Drawing.Point(27, 164);
             this.txtValorUnitario.Mask = "000.00";
             this.txtValorUnitario.Name = "txtValorUnitario";
             this.txtValorUnitario.Size = new System.Drawing.Size(120, 23);
-            this.txtValorUnitario.TabIndex = 73;            
+            this.txtValorUnitario.TabIndex = 73;
             // 
             // label7
             // 
