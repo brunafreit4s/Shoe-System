@@ -41,6 +41,10 @@
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCadVenda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsVenda = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodRestric = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
@@ -58,7 +62,8 @@
             this.funcioarioToolStripMenuItem,
             this.produtoToolStripMenuItem,
             this.estoqueToolStripMenuItem,
-            this.vendaToolStripMenuItem});
+            this.vendaToolStripMenuItem,
+            this.relatóriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(631, 25);
@@ -132,7 +137,7 @@
             this.menuConsEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.menuConsEstoque.ForeColor = System.Drawing.Color.White;
             this.menuConsEstoque.Name = "menuConsEstoque";
-            this.menuConsEstoque.Size = new System.Drawing.Size(152, 22);
+            this.menuConsEstoque.Size = new System.Drawing.Size(131, 22);
             this.menuConsEstoque.Text = "Consultar";
             this.menuConsEstoque.Click += new System.EventHandler(this.consultarToolStripMenuItem2_Click);
             // 
@@ -162,6 +167,37 @@
             this.menuConsVenda.Size = new System.Drawing.Size(131, 22);
             this.menuConsVenda.Text = "Consultar";
             this.menuConsVenda.Click += new System.EventHandler(this.consultarToolStripMenuItem4_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtoToolStripMenuItem1,
+            this.estoqueToolStripMenuItem1,
+            this.vendaToolStripMenuItem1});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // produtoToolStripMenuItem1
+            // 
+            this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
+            this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.produtoToolStripMenuItem1.Text = "Produto";
+            this.produtoToolStripMenuItem1.Click += new System.EventHandler(this.produtoToolStripMenuItem1_Click);
+            // 
+            // estoqueToolStripMenuItem1
+            // 
+            this.estoqueToolStripMenuItem1.Name = "estoqueToolStripMenuItem1";
+            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.estoqueToolStripMenuItem1.Text = "Estoque";
+            this.estoqueToolStripMenuItem1.Click += new System.EventHandler(this.estoqueToolStripMenuItem1_Click);
+            // 
+            // vendaToolStripMenuItem1
+            // 
+            this.vendaToolStripMenuItem1.Name = "vendaToolStripMenuItem1";
+            this.vendaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.vendaToolStripMenuItem1.Text = "Venda";
+            this.vendaToolStripMenuItem1.Click += new System.EventHandler(this.vendaToolStripMenuItem1_Click);
             // 
             // label1
             // 
@@ -276,5 +312,9 @@
         private System.Windows.Forms.Label lblCpf;
         public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNomeLogado;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem1;
     }
 }

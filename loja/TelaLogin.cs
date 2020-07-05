@@ -47,7 +47,7 @@ namespace loja
                 Form.menuConsFunc.Enabled = true;
                 Form.menuCadProd.Enabled = false;
                 Form.menuConsProd.Enabled = true;
-                Form.menuCadVenda.Enabled = false;
+                Form.menuCadVenda.Enabled = true;
                 Form.menuConsVenda.Enabled = true;
                 Form.menuConsEstoque.Enabled = true;
             }

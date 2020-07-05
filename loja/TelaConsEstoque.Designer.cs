@@ -36,7 +36,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.resourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mySqlDataReaderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNomeItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.txtQuantidade = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.resourcesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySqlDataReaderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -107,18 +107,6 @@
             // mySqlDataReaderBindingSource
             // 
             this.mySqlDataReaderBindingSource.DataSource = typeof(MySql.Data.MySqlClient.MySqlDataReader);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.dataGridView1.ForeColor = System.Drawing.Color.Black;
-            //this.dataGridView1.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(535, 254);
-            this.dataGridView1.TabIndex = 40;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContent);
             // 
             // label6
             // 
@@ -224,6 +212,16 @@
             this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.ValidatingType = typeof(int);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 187);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(535, 254);
+            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContent);
+            // 
             // TelaConsEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -267,7 +265,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.BindingSource mySqlDataReaderBindingSource;
         private System.Windows.Forms.BindingSource resourcesBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNomeItem;
         private System.Windows.Forms.Label label1;
@@ -278,5 +275,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.MaskedTextBox txtQuantidade;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

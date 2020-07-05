@@ -105,6 +105,24 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaRelatEstoq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRelatEstoq.Designer.cs">
+      <DependentUpon>TelaRelatEstoq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaRelatProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRelatProd.Designer.cs">
+      <DependentUpon>TelaRelatProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaRelatVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRelatVenda.Designer.cs">
+      <DependentUpon>TelaRelatVenda.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TelaCadFunc.resx">
       <DependentUpon>TelaCadFunc.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +159,15 @@
     </Compile>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRelatEstoq.resx">
+      <DependentUpon>TelaRelatEstoq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRelatProd.resx">
+      <DependentUpon>TelaRelatProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRelatVenda.resx">
+      <DependentUpon>TelaRelatVenda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.AuthenticationPluginConfigurationElement.datasource" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseCommandInterceptor.datasource" />
@@ -205,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TelaEstoque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TelaProdutos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

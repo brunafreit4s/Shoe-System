@@ -85,5 +85,26 @@ namespace loja
         {
 
         }
+
+        private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaRelatProd Form = new TelaRelatProd();
+            Form.Show();
+            Visible = true;
+        }
+
+        private void estoqueToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaRelatEstoq Form = new TelaRelatEstoq();
+            Form.Show();
+            Visible = true;
+        }
+
+        private void vendaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaRelatVenda Form = new TelaRelatVenda();
+            Form.Show();
+            Visible = true;
+        }
     }
 }
