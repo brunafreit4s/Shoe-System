@@ -110,7 +110,7 @@
             this.Font = new System.Drawing.Font("Corbel", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLogin";
-            this.Text = "Shoe System";
+            this.Text = "SGVE";
             this.Load += new System.EventHandler(this.TelaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
