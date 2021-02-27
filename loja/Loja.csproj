@@ -127,10 +127,10 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="rptVendas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>rptVendas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TelaCadFunc.cs">
@@ -207,9 +207,9 @@
     <Compile Include="TelaRelatVenda.Designer.cs">
       <DependentUpon>TelaRelatVenda.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="rptVendas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>rptVendas.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadFunc.resx">
       <DependentUpon>TelaCadFunc.cs</DependentUpon>

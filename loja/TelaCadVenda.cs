@@ -226,7 +226,7 @@ namespace loja
             }
         }
 
-        public void incluirVenda()
+        private void incluirVenda()
         {
             con.Open();
             string sql = "insert into Venda(nomeCliente, cpfCliente, dataCompra, nomeFuncionario, cpfFuncionario, codProd, nomeProd, quantidade, codBarras, tipoPagamento, numParcelas, valorParcela, valorUnitario,desconto, total) values('" + txtCliente.Text + "', '" + txtCpfCliente.Text + "', '" + Convert.ToDateTime(txtDataCompra.Text).ToString("yyyy/MM/dd") + "', '" + txtVendedor.Text + "', '" + txtCpfVendedor.Text + "', '" + txtCodigo.Text + "', '" + txtProduto.Text + "', '" + txtQuantidade.Text + "', '" + txtCodigoBarra.Text + "', '" + cboTipoPagamento.Text + "', '" + txtParcelas.Text + "', '" + txtValorParcela.Text + "', '" + txtValorUnitario.Text + "', '" + txtDesconto.Text + "', '" + txtValorTotal.Text + "')";
@@ -236,7 +236,7 @@ namespace loja
             con.Close();
         }
 
-        public void retiraEstoque()
+        private void retiraEstoque()
         {
             totalAtual = 0;
             con.Open();
@@ -257,7 +257,7 @@ namespace loja
             atualizarEstoque();
         }
 
-        public void atualizarEstoque()
+        private void atualizarEstoque()
         {
             con.Open();
             string sql = "update Estoque set quantidadeProdEstoq = '" + totalAtual + "' where fk_codProd = '" + txtCodigo.Text + "'";

@@ -218,7 +218,7 @@ namespace loja
             txtCodigoBarra.Text = "";
         }
 
-        public void alterarProdEstoque() {
+        private void alterarProdEstoque() {
             con.Open();
             int codCombo = cboTipo.SelectedIndex + 1;
             string sql = "update Estoque set nomeProdEstoq = '" + txtNomeProduto.Text + "', quantidadeProdEstoq = '" + txtQuantidade.Text + "', precoProdEstoq = '" + txtPreco.Text + "', marcaProdEstoq = '" + txtMarca.Text + "', codTipoProdEstoq = '" + codCombo + "' where fk_codProd = '" + txtCodProd.Text + "'";            
@@ -227,7 +227,7 @@ namespace loja
             con.Close();
         }
 
-        public void alterarProd() {
+        private void alterarProd() {
             con.Open();
             int codCombo = cboTipo.SelectedIndex + 1;
             string sql = "update Produto set nomeProd = '" + txtNomeProduto.Text + "', quantidadeProd = '" + txtQuantidade.Text + "', dataCadProd = '" + Convert.ToDateTime(txtDtCad.Text).ToString("yyyy/MM/dd") + "', precoProd = '" + txtPreco.Text + "', custoProd = '" + txtCusto.Text + "', marcaProd = '" + txtMarca.Text + "', dataCompraProd = '" + Convert.ToDateTime(txtDtCompra.Text).ToString("yyyy/MM/dd") + "', nomeFornecedor = '" + txtFornecedor.Text + "', codTipo = '" + codCombo + "', descricaoProd = '" + txtDescricao.Text + "', codigoBarras = '" + txtCodigoBarra.Text + "' where codProd ='" + txtCodProd.Text + "'";
@@ -236,7 +236,7 @@ namespace loja
             con.Close();
         }
 
-        public void excluirProdEstoque() {
+        private void excluirProdEstoque() {
             con.Open();
             string sql = "delete from Estoque where fk_codProd = '" + txtCodProd.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -244,7 +244,7 @@ namespace loja
             con.Close();
         }
 
-        public void excluirProd() {
+        private void excluirProd() {
             con.Open();
             string sql = "delete from Produto where codProd ='" + txtCodProd.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);

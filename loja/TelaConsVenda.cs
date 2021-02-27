@@ -25,7 +25,7 @@ namespace loja
 
         }
 
-        public DataTable listaCliente()
+        public DataTable consVendaCliente()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -42,7 +42,7 @@ namespace loja
             return dt;
         }
 
-        public DataTable listaVendedor()
+        public DataTable consVendaFunc()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -59,7 +59,7 @@ namespace loja
             return dt;
         }
 
-        public DataTable lista()
+        public DataTable consVenda()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -80,17 +80,17 @@ namespace loja
         {
             if (txtCpfCliente.Text != "   ,   ,   -")
             {
-                dataGridView1.DataSource = listaCliente();
+                dataGridView1.DataSource = consVendaCliente();
                 txtCpfCliente.Text = "";
             }
             else if (txtCpfVendedor.Text != "   ,   ,   -")
             {
-                dataGridView1.DataSource = listaVendedor();
+                dataGridView1.DataSource = consVendaFunc();
                 txtCpfVendedor.Text = "";
             }
             else
             {
-                dataGridView1.DataSource = lista();
+                dataGridView1.DataSource = consVenda();
             }
         }
 

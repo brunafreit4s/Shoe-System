@@ -16,14 +16,14 @@ namespace loja {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class rptVendas : ReportClass {
         
-        public CrystalReport1() {
+        public rptVendas() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "rptVendas.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace loja {
         
         public override string FullResourceName {
             get {
-                return "loja.CrystalReport1.rpt";
+                return "loja.rptVendas.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace loja {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedrptVendas : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedrptVendas() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace loja {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            rptVendas rpt = new rptVendas();
             rpt.Site = this.Site;
             return rpt;
         }
