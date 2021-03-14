@@ -63,113 +63,113 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="rptVendas.cs">
+    <Compile Include="Reports\rptVendas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVendas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TelaCadFunc.cs">
+    <Compile Include="Forms\frmCadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadFunc.Designer.cs">
-      <DependentUpon>TelaCadFunc.cs</DependentUpon>
+    <Compile Include="Forms\frmCadFunc.Designer.cs">
+      <DependentUpon>frmCadFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaCadProd.cs">
+    <Compile Include="Forms\frmCadProd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadProd.Designer.cs">
-      <DependentUpon>TelaCadProd.cs</DependentUpon>
+    <Compile Include="Forms\frmCadProd.Designer.cs">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaCadVenda.cs">
+    <Compile Include="Forms\frmCadVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadVenda.Designer.cs">
-      <DependentUpon>TelaCadVenda.cs</DependentUpon>
+    <Compile Include="Forms\frmCadVenda.Designer.cs">
+      <DependentUpon>frmCadVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaConsEstoque.cs">
+    <Compile Include="Forms\frmEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsEstoque.Designer.cs">
-      <DependentUpon>TelaConsEstoque.cs</DependentUpon>
+    <Compile Include="Forms\frmEstoque.Designer.cs">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaConsFunc.cs">
+    <Compile Include="Forms\frmFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsFunc.Designer.cs">
-      <DependentUpon>TelaConsFunc.cs</DependentUpon>
+    <Compile Include="Forms\frmFuncionarios.Designer.cs">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaConsProd.cs">
+    <Compile Include="Forms\frmProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsProd.Designer.cs">
-      <DependentUpon>TelaConsProd.cs</DependentUpon>
+    <Compile Include="Forms\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaConsVenda.cs">
+    <Compile Include="Forms\frmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsVenda.Designer.cs">
-      <DependentUpon>TelaConsVenda.cs</DependentUpon>
+    <Compile Include="Forms\frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaLogin.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaLogin.Designer.cs">
-      <DependentUpon>TelaLogin.cs</DependentUpon>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaPrincipal.cs">
+    <Compile Include="Forms\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    <Compile Include="Forms\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaRelatEstoq.cs">
+    <Compile Include="Forms\frmRptEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaRelatEstoq.Designer.cs">
-      <DependentUpon>TelaRelatEstoq.cs</DependentUpon>
+    <Compile Include="Forms\frmRptEstoque.Designer.cs">
+      <DependentUpon>frmRptEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaRelatProd.cs">
+    <Compile Include="Forms\frmRptProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaRelatProd.Designer.cs">
-      <DependentUpon>TelaRelatProd.cs</DependentUpon>
+    <Compile Include="Forms\frmRptProduto.Designer.cs">
+      <DependentUpon>frmRptProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaRelatVenda.cs">
+    <Compile Include="Forms\frmRptVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaRelatVenda.Designer.cs">
-      <DependentUpon>TelaRelatVenda.cs</DependentUpon>
+    <Compile Include="Forms\frmRptVendas.Designer.cs">
+      <DependentUpon>frmRptVendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="rptVendas.rpt">
+    <EmbeddedResource Include="Reports\rptVendas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVendas.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadFunc.resx">
-      <DependentUpon>TelaCadFunc.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadFunc.resx">
+      <DependentUpon>frmCadFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadProd.resx">
-      <DependentUpon>TelaCadProd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadProd.resx">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadVenda.resx">
-      <DependentUpon>TelaCadVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadVenda.resx">
+      <DependentUpon>frmCadVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsEstoque.resx">
-      <DependentUpon>TelaConsEstoque.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmEstoque.resx">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsFunc.resx">
-      <DependentUpon>TelaConsFunc.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmFuncionarios.resx">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsProd.resx">
-      <DependentUpon>TelaConsProd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsVenda.resx">
-      <DependentUpon>TelaConsVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaLogin.resx">
-      <DependentUpon>TelaLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,17 +181,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaRelatEstoq.resx">
-      <DependentUpon>TelaRelatEstoq.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRptEstoque.resx">
+      <DependentUpon>frmRptEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaRelatProd.resx">
-      <DependentUpon>TelaRelatProd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRptProduto.resx">
+      <DependentUpon>frmRptProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaRelatVenda.resx">
-      <DependentUpon>TelaRelatVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRptVendas.resx">
+      <DependentUpon>frmRptVendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.AuthenticationPluginConfigurationElement.datasource" />

@@ -14,15 +14,15 @@ using MySql.Data.MySqlClient;
 
 namespace loja
 {
-    public partial class TelaLogin : Form
+    public partial class frmLogin : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         Boolean retorno = false;
-        TelaPrincipal Form = new TelaPrincipal();
-        TelaConsFunc FormConsFunc = new TelaConsFunc();
-        TelaCadVenda FormCadVenda = new TelaCadVenda();
+        DashBoard Form = new DashBoard();
+        frmFuncionarios FormConsFunc = new frmFuncionarios();
+        frmCadVenda FormCadVenda = new frmCadVenda();
 
-        public TelaLogin()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -95,7 +95,7 @@ namespace loja
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            Form = new TelaPrincipal();
+            Form = new DashBoard();
             if (txtLogin.Text == "")
             {
                 MessageBox.Show("Digite um Login", "Atenção");

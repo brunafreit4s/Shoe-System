@@ -1,6 +1,6 @@
 ﻿namespace loja
 {
-    partial class TelaPrincipal
+    partial class DashBoard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.funcioarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCadFunc = new System.Windows.Forms.ToolStripMenuItem();

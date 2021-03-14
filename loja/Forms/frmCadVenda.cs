@@ -11,13 +11,13 @@ using MySql.Data.MySqlClient;
 
 namespace loja
 {
-    public partial class TelaCadVenda : Form
+    public partial class frmCadVenda : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         int totalAtual = 0; //Quantidade Atual no Estoque
         int quantidade = 0;
 
-        public TelaCadVenda()
+        public frmCadVenda()
         {
             InitializeComponent();
         }

@@ -11,11 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace loja
 {
-    public partial class TelaConsVenda : Form
+    public partial class frmVendas : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
 
-        public TelaConsVenda()
+        public frmVendas()
         {
             InitializeComponent();
         }

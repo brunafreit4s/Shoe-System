@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace loja {
+namespace loja.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace loja {
         
         public override string FullResourceName {
             get {
-                return "loja.rptVendas.rpt";
+                return "loja.Reports.rptVendas.rpt";
             }
             set {
                 // Do nothing

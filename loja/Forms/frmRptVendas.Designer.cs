@@ -1,6 +1,6 @@
 ﻿namespace loja
 {
-    partial class TelaRelatEstoq
+    partial class frmRptVendas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatEstoq));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRptVendas));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.rptVendas = new loja.rptVendas();
             this.SuspendLayout();
@@ -42,19 +42,19 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.rptVendas;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(531, 490);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(563, 505);
+            this.crystalReportViewer1.TabIndex = 1;
             // 
-            // TelaRelatEstoq
+            // TelaRelatVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::loja.Properties.Resources.TelaEstoque;
-            this.ClientSize = new System.Drawing.Size(531, 490);
+            this.BackgroundImage = global::loja.Properties.Resources.TelaVenda;
+            this.ClientSize = new System.Drawing.Size(563, 505);
             this.Controls.Add(this.crystalReportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "TelaRelatEstoq";
-            this.Text = "Relatório do Estoque";
+            this.Name = "TelaRelatVenda";
+            this.Text = "Relatório de Venda";
             this.ResumeLayout(false);
 
         }

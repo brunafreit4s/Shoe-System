@@ -1,6 +1,6 @@
 ﻿namespace loja
 {
-    partial class TelaRelatProd
+    partial class frmRptEstoque
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatProd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRptEstoque));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.rptVendas = new loja.rptVendas();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(599, 494);
-            this.crystalReportViewer1.TabIndex = 1;
+            this.crystalReportViewer1.ReportSource = this.rptVendas;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(531, 490);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
-            // TelaRelatProd
+            // TelaRelatEstoq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::loja.Properties.Resources.TelaProdutos;
-            this.ClientSize = new System.Drawing.Size(599, 494);
+            this.BackgroundImage = global::loja.Properties.Resources.TelaEstoque;
+            this.ClientSize = new System.Drawing.Size(531, 490);
             this.Controls.Add(this.crystalReportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "TelaRelatProd";
-            this.Text = "Relatório de Produtos";
+            this.Name = "TelaRelatEstoq";
+            this.Text = "Relatório do Estoque";
             this.ResumeLayout(false);
 
         }
@@ -60,5 +62,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private rptVendas rptVendas;
     }
 }

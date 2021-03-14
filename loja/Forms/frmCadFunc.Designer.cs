@@ -1,6 +1,6 @@
 ﻿namespace loja
 {
-    partial class TelaCadFunc
+    partial class frmCadFunc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadFunc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFunc));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -500,7 +500,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadFunc";
             this.Text = "Cadastrar Funcionário";
-            this.Load += new System.EventHandler(this.TelaCadFunc_Load);
+            this.Load += new System.EventHandler(this.frmCadFunc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

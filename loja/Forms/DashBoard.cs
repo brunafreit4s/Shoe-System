@@ -11,52 +11,52 @@ using MySql.Data.MySqlClient;
 
 namespace loja
 {
-    public partial class TelaPrincipal : Form
+    public partial class DashBoard : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-        public TelaPrincipal()
+        public DashBoard()
         {
             InitializeComponent();
         }
 
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TelaCadFunc Form = new TelaCadFunc();
+            frmCadFunc Form = new frmCadFunc();
             Form.Show();
             Visible = true;
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TelaConsFunc Form = new TelaConsFunc();
+            frmFuncionarios Form = new frmFuncionarios();
             Form.Show();
             Visible = true;
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TelaCadProd Form = new TelaCadProd();
+            frmCadProd Form = new frmCadProd();
             Form.Show();
             Visible = true;
         }
 
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TelaConsProd Form = new TelaConsProd();
+            frmProduto Form = new frmProduto();
             Form.Show();
             Visible = true;
         }
 
         private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            TelaConsEstoque Form = new TelaConsEstoque();
+            frmEstoque Form = new frmEstoque();
             Form.Show();
             Visible = true;
         }
 
         private void consultarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            TelaCadVenda Form = new TelaCadVenda();
+            frmCadVenda Form = new frmCadVenda();
             Form.Show();
             Visible = true;
 
@@ -76,33 +76,28 @@ namespace loja
 
         private void consultarToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            TelaConsVenda Form = new TelaConsVenda();
+            frmVendas Form = new frmVendas();
             Form.Show();
             Visible = true;
         }
 
-        private void TelaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TelaRelatProd Form = new TelaRelatProd();
+            frmRptProduto Form = new frmRptProduto();
             Form.Show();
             Visible = true;
         }
 
         private void estoqueToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TelaRelatEstoq Form = new TelaRelatEstoq();
+            frmRptEstoque Form = new frmRptEstoque();
             Form.Show();
             Visible = true;
         }
 
         private void vendaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TelaRelatVenda Form = new TelaRelatVenda();
+            frmRptVendas Form = new frmRptVendas();
             Form.Show();
             Visible = true;
         }

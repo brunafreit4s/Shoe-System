@@ -1,6 +1,6 @@
 ﻿namespace loja
 {
-    partial class TelaCadProd
+    partial class frmCadProd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadProd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.label1 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();

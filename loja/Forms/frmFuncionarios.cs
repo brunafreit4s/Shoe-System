@@ -11,12 +11,12 @@ using MySql.Data.MySqlClient;
 
 namespace loja
 {
-    public partial class TelaConsFunc : Form
+    public partial class frmFuncionarios : Form
     {
         MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         Boolean retorno = false;
 
-        public TelaConsFunc()
+        public frmFuncionarios()
         {
             InitializeComponent();
         }
@@ -127,7 +127,7 @@ namespace loja
                 }
                 else
                 {
-                    TelaPrincipal tl = new TelaPrincipal();
+                    DashBoard tl = new DashBoard();
                     con.Open();
 
                     if (comboCargo.Text == "Gerente")

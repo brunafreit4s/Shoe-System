@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace loja
 {
-    public partial class TelaRelatProd : Form
+    public partial class frmRptProduto : Form
     {
-        public TelaRelatProd()
+        public frmRptProduto()
         {
             InitializeComponent();
         }
