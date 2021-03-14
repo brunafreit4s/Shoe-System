@@ -13,7 +13,7 @@ namespace loja
 {
     public partial class frmCadProd : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         private int codProd;
         private String msgErro;
 
@@ -66,7 +66,7 @@ namespace loja
             con.Close();
         }
 
-        private void TelaCadProd_Load(object sender, EventArgs e)
+        private void frmCadProd_Load(object sender, EventArgs e)
         {
             //Preenche o ComboBox com os cadastros da Tabela - Tipo de Produto
             con.Open();

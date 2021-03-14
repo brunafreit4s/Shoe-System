@@ -13,16 +13,16 @@ namespace loja
 {
     public partial class frmProduto : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-        Boolean retorno = false;
-        Boolean consultarPorCod = false;
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private Boolean retorno = false;
+        private Boolean consultarPorCod = false;
 
         public frmProduto()
         {
             InitializeComponent();
         }
 
-        public void ConsultaBanco()
+        private void ConsultaBanco()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -199,24 +199,7 @@ namespace loja
                     MessageBox.Show(ex.ToString());
                 }
             }
-        }
-
-        public void limparTela()
-        {
-            txtCodProd.Text = "";
-            txtNomeProduto.Text = "";
-            txtQuantidade.Text = "";
-            txtDtCad.Text = "";
-            txtPreco.Text = "";
-            txtCusto.Text = "";
-            txtMarca.Text = "";
-            txtDtCompra.Text = "";
-            txtFornecedor.Text = "";
-            cboTipo.Text = "";
-            txtEstoque.Text = "";
-            txtDescricao.Text = "";
-            txtCodigoBarra.Text = "";
-        }
+        }        
 
         private void alterarProdEstoque() {
             con.Open();
@@ -250,6 +233,23 @@ namespace loja
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();            
-        }        
+        }
+
+        private void limparTela()
+        {
+            txtCodProd.Text = "";
+            txtNomeProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtDtCad.Text = "";
+            txtPreco.Text = "";
+            txtCusto.Text = "";
+            txtMarca.Text = "";
+            txtDtCompra.Text = "";
+            txtFornecedor.Text = "";
+            cboTipo.Text = "";
+            txtEstoque.Text = "";
+            txtDescricao.Text = "";
+            txtCodigoBarra.Text = "";
+        }
     }
 }

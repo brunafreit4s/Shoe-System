@@ -13,7 +13,7 @@ namespace loja
 {
     public partial class frmEstoque : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
 
         public frmEstoque()
         {
@@ -24,15 +24,15 @@ namespace loja
         {
             if (txtCodProd.Text != "")
             {
-                dataGridView1.DataSource = listaCodProd();
+                dataGridView1.DataSource = consCodProd();
             }
             else
             {
-                dataGridView1.DataSource = lista();
+                dataGridView1.DataSource = consProduto();
             }
         }
 
-        public DataTable listaCodProd() {
+        private DataTable consCodProd() {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -44,7 +44,7 @@ namespace loja
             return dt;
         }
 
-        public DataTable lista()
+        private DataTable consProduto()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();

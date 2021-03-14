@@ -16,45 +16,35 @@ namespace loja
 {
     public partial class frmLogin : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-        Boolean retorno = false;
-        DashBoard Form = new DashBoard();
-        frmFuncionarios FormConsFunc = new frmFuncionarios();
-        frmCadVenda FormCadVenda = new frmCadVenda();
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private Boolean retorno = false;
+        private DashBoard Form = new DashBoard();
+        private frmFuncionarios FormConsFunc = new frmFuncionarios();
+        private frmCadVenda FormCadVenda = new frmCadVenda();
 
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        public void AcessarTelaPrincipal()
+        private void AcessarTelaPrincipal()
         {
             Form.Show();
             Visible = true;
             if (Form.txtCodRestric.Text == "1")
             {
-                Form.menuCadFunc.Enabled = true;
-                Form.menuConsFunc.Enabled = true;
-                Form.menuCadProd.Enabled = true;
-                Form.menuConsProd.Enabled = true;
-                Form.menuCadVenda.Enabled = true;
-                Form.menuConsVenda.Enabled = true;
-                Form.menuConsEstoque.Enabled = true;
+                DesabilitaCampos(true);
             }
             else
             {
+                DesabilitaCampos(true);
                 Form.menuCadFunc.Enabled = false;
-                Form.menuConsFunc.Enabled = true;
                 Form.menuCadProd.Enabled = false;
-                Form.menuConsProd.Enabled = true;
-                Form.menuCadVenda.Enabled = true;
-                Form.menuConsVenda.Enabled = true;
-                Form.menuConsEstoque.Enabled = true;
             }
         }
 
 
-        public void ConexaoBanco()
+        private void ConexaoBanco()
         {            
             int i = 0;
             con.Open();
@@ -88,11 +78,6 @@ namespace loja
             con.Close();
         }
 
-        private void TelaLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogar_Click(object sender, EventArgs e)
         {
             Form = new DashBoard();
@@ -124,6 +109,16 @@ namespace loja
                     MessageBox.Show(ex.ToString());
                 }
             }
+        }
+
+        private void DesabilitaCampos(Boolean Enabled) {
+            Form.menuCadFunc.Enabled = Enabled;
+            Form.menuConsFunc.Enabled = Enabled;
+            Form.menuCadProd.Enabled = Enabled;
+            Form.menuConsProd.Enabled = Enabled;
+            Form.menuCadVenda.Enabled = Enabled;
+            Form.menuConsVenda.Enabled = Enabled;
+            Form.menuConsEstoque.Enabled = Enabled;
         }
     }
 }

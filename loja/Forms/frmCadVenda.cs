@@ -13,9 +13,10 @@ namespace loja
 {
     public partial class frmCadVenda : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-        int totalAtual = 0; //Quantidade Atual no Estoque
-        int quantidade = 0;
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private int totalAtual = 0; //Quantidade Atual no Estoque
+        private int quantidade = 0;
+        private String msgErro;
 
         public frmCadVenda()
         {
@@ -36,7 +37,7 @@ namespace loja
             }
         }
 
-        private void TelaCadVenda_Load(object sender, EventArgs e)
+        private void frmCadVenda_Load(object sender, EventArgs e)
         {
             //Preenche o ComboBox com os cadastros da Tabela - Tipo de Pagamento
             con.Open();
@@ -73,6 +74,7 @@ namespace loja
                 {
                     MessageBox.Show("Não existe Produto cadastrado com esse Código!", "Atenção!");
                 }
+
                 con.Close();
             }
             else if (txtCodigoBarra.Text != "")
@@ -155,69 +157,22 @@ namespace loja
         {
             try
             {
-                if (txtCliente.Text == "")
+                if (ValidarCampos())
                 {
-                    MessageBox.Show("Digite o Nome do Cliente", "Atenção");
-                }
-                else if (txtCpfCliente.Text == "   .   .   -  ")
-                {
-                    MessageBox.Show("É necessário o CPF do Cliente", "Atenção");
-                }
-                else if (txtCpfCliente.Text == "000.000.000-00")
-                {
-                    MessageBox.Show("O CPF do Cliente deve ser Válido", "Atenção");
-                }
-                else if (txtCpfVendedor.Text == "   .   .   -  ")
-                {
-                    MessageBox.Show("É necessário o CPF do Vendedor", "Atenção");
-                }
-                else if (txtCpfVendedor.Text == "000.000.000-00")
-                {
-                    MessageBox.Show("O CPF do Vendedor deve ser Válido", "Atenção");
-                }
-                else if (txtCodigo.Text == "")
-                {
-                    MessageBox.Show("É necessário um Produto", "Atenção");
-                }
-                else if (txtCodigoBarra.Text == "")
-                {
-                    MessageBox.Show("É necessário um Produto", "Atenção");
-                }
-                else if (Convert.ToInt32(txtQuantidade.Text) > quantidade)
-                {
-                    MessageBox.Show("A Quantidade de produtos é maior do que a cadastrada no Estoque", "Atenção");
-                }
-                else if (txtValorUnitario.Text == "000.00")
-                {
-                    MessageBox.Show("O Valor Unitário não pode ser 0", "Atenção");
-                }
-                else if (txtValorUnitario.Text == "   .  ")
-                {
-                    MessageBox.Show("É necessário digitar um Valor Unitário", "Atenção");
-                }
-                else if (chkParcelado.Checked == true)
-                {
-                    if (txtValorParcela.Text == "   .  ")
+                    if (txtValorTotal.Text == "   .  ")
                     {
-                        MessageBox.Show("É necessário digitar Valor da Parcela", "Atenção");
+                        //Não efetua o cadastro até atualizar o textBox com o Valor total
                     }
-                    else if (txtValorParcela.Text == "000.00")
+                    else
                     {
-                        MessageBox.Show("O Valor da Parcela não pode ser 0", "Atenção");
+                        cadVenda();
+                        retiraEstoque();
                     }
-                    else if (txtParcelas.Text == "0")
-                    {
-                        MessageBox.Show("A Quantidade de Parcelas não pode ser 0", "Atenção");
-                    }
-                }
-                else if (txtValorTotal.Text == "   .  ")
-                {
-                    //Não efetua o cadastro até atualizar o textBox com o Valor total
                 }
                 else
                 {
-                    incluirVenda();
-                    retiraEstoque();
+                    con.Close(); //Verificar se vai dar erro nessa linha!!!!!!!!!
+                    MessageBox.Show(msgErro, "Atenção!");
                 }
             }
             catch (Exception ex)
@@ -226,7 +181,7 @@ namespace loja
             }
         }
 
-        private void incluirVenda()
+        private void cadVenda()
         {
             con.Open();
             string sql = "insert into Venda(nomeCliente, cpfCliente, dataCompra, nomeFuncionario, cpfFuncionario, codProd, nomeProd, quantidade, codBarras, tipoPagamento, numParcelas, valorParcela, valorUnitario,desconto, total) values('" + txtCliente.Text + "', '" + txtCpfCliente.Text + "', '" + Convert.ToDateTime(txtDataCompra.Text).ToString("yyyy/MM/dd") + "', '" + txtVendedor.Text + "', '" + txtCpfVendedor.Text + "', '" + txtCodigo.Text + "', '" + txtProduto.Text + "', '" + txtQuantidade.Text + "', '" + txtCodigoBarra.Text + "', '" + cboTipoPagamento.Text + "', '" + txtParcelas.Text + "', '" + txtValorParcela.Text + "', '" + txtValorUnitario.Text + "', '" + txtDesconto.Text + "', '" + txtValorTotal.Text + "')";
@@ -264,6 +219,38 @@ namespace loja
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+        private Boolean ValidarCampos()
+        {
+            if (txtCliente.Text == "") { MessageBox.Show("Digite o Nome do Cliente"); return false; }
+
+            if (txtCpfCliente.Text == "   .   .   -  ") { MessageBox.Show("É necessário o CPF do Cliente"); return false; }
+
+            if (txtCpfCliente.Text == "000.000.000-00") { MessageBox.Show("O CPF do Cliente deve ser Válido"); return false; }
+
+            if (txtCpfVendedor.Text == "   .   .   -  ") { MessageBox.Show("É necessário o CPF do Vendedor"); return false; }
+
+            if (txtCpfVendedor.Text == "000.000.000-00") { MessageBox.Show("O CPF do Vendedor deve ser Válido"); return false; }
+
+            if (txtCodigo.Text == "") { MessageBox.Show("É necessário um Produto"); return false; }
+
+            if (txtCodigoBarra.Text == "") { MessageBox.Show("É necessário um Produto"); return false; }
+
+            if (Convert.ToInt32(txtQuantidade.Text) > quantidade) { MessageBox.Show("A Quantidade de produtos é maior do que a cadastrada no Estoque"); return false; }
+
+            if (txtValorUnitario.Text == "000.00") { MessageBox.Show("O Valor Unitário não pode ser 0"); return false; }
+
+            if (txtValorUnitario.Text == "   .  ") { MessageBox.Show("É necessário digitar um Valor Unitário"); return false; }
+
+            if (chkParcelado.Checked == true)
+            {
+                if (txtValorParcela.Text == "   .  ") { MessageBox.Show("É necessário digitar Valor da Parcela"); return false; }
+                else if (txtValorParcela.Text == "000.00") { MessageBox.Show("O Valor da Parcela não pode ser 0"); return false; }
+                else if (txtParcelas.Text == "0") { MessageBox.Show("A Quantidade de Parcelas não pode ser 0"); return false; }
+            }
+
+            return true;
         }
     }
 }

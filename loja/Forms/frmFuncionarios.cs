@@ -13,15 +13,16 @@ namespace loja
 {
     public partial class frmFuncionarios : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-        Boolean retorno = false;
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
+        private Boolean retorno = false;
+        private String msgErro;
 
         public frmFuncionarios()
         {
             InitializeComponent();
         }
 
-        public void ConsultaBanco()
+        public void consFunc()
         {
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
@@ -80,7 +81,7 @@ namespace loja
             {
                 try
                 {
-                    ConsultaBanco();
+                    consFunc();
 
                     if (retorno == false)
                     {
@@ -113,19 +114,8 @@ namespace loja
         {
             try
             {
-                if (txtNome.Text == "")
-                {
-                    MessageBox.Show("É nescessário digitar um Nome", "Atenção");
-                }
-                else if (txtCpf.Text == "")
-                {
-                    MessageBox.Show("É nescessário digitar um CPF", "Atenção");
-                }
-                else if (txtLogin.Text == "")
-                {
-                    MessageBox.Show("É nescessário digitar um login de acesso ao Sistema", "Atenção");
-                }
-                else
+
+                if (ValidarCampos())
                 {
                     DashBoard tl = new DashBoard();
                     con.Open();
@@ -145,6 +135,10 @@ namespace loja
                     MessageBox.Show("Funcionário Alterado.", "Atenção");
                     con.Close();
                     limparTela();
+                }
+                else
+                {
+                    MessageBox.Show(msgErro, "Atenção!");
                 }
             }
             catch (Exception ex)
@@ -181,7 +175,19 @@ namespace loja
             }
         }
 
-        public void limparTela() {
+        private Boolean ValidarCampos()
+        {
+            if (txtNome.Text == "") { MessageBox.Show("É nescessário digitar um Nome"); return false; }
+
+            if (txtCpf.Text == "") { MessageBox.Show("É nescessário digitar um CPF"); return false; }
+
+            if (txtLogin.Text == "") { MessageBox.Show("É nescessário digitar um login de acesso ao Sistema"); return false; }
+
+            return true;
+        }
+
+        private void limparTela()
+        {
             txtMatricula.Text = "";
             txtBairro.Text = "";
             txtCelular.Text = "";

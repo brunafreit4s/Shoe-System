@@ -13,8 +13,7 @@ namespace loja
 {
     public partial class frmCadFunc : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
-
+        private MySqlConnection con = new MySqlConnection("server=localhost; user=root;database=loja;port=3306;password=root;");
         private String msgError;
 
         public frmCadFunc()

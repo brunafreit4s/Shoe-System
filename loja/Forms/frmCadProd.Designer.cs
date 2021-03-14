@@ -346,7 +346,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadProd";
             this.Text = "Cadastrar Produtos";
-            this.Load += new System.EventHandler(this.TelaCadProd_Load);
+            this.Load += new System.EventHandler(this.frmCadProd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
